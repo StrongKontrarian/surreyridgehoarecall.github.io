@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Proxy Form - Surrey Ridge HOA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 640px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 1rem 0 0.25rem;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>📬 Submit Your Proxy Form</h1>
+
+  <form action="https://formspree.io/f/mwkgyyvy" method="POST" enctype="multipart/form-data">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Your Email Address</label>
+    <input type="email" id="email" name="email" value="scott@surreyridgehoarecall.org" readonly />
+
+    <label for="address">Property Address</label>
+    <input type="text" id="address" name="address" placeholder="e.g., 9925 Surrey Ridge Rd" required />
+
+    <label for="message">Message / Statement</label>
+    <textarea id="message" name="message" rows="6" required>
+I would like to submit my proxy form so you can take actions necessary to remove directors who broke the law, bring transparency to homeowners, re-open the community pool for families and use your experience in business management and technology to try and reduce HOA annual costs that have been increased by the directors proposed for recall.
+    </textarea>
+
+    <label for="file">Upload Proxy Form (PDF or Image)</label>
+    <input type="file" id="file" name="file" accept=".pdf,image/*" required />
+
+    <button type="submit">✅ Submit Proxy</button>
+  </form>
+</body>
+</html>
