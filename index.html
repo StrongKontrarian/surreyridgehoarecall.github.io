@@ -13,6 +13,12 @@
         a.button { display: block; background-color: #4a90e2; color: white; padding: 14px 20px; margin: 14px auto; width: 90%; max-width: 420px; border-radius: 10px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 0 #357ab8; transition: background-color 0.3s ease, box-shadow 0.3s ease; }
         a.button:hover { background-color: #2f6ebc; box-shadow: 0 4px 0 #275c97; text-decoration: none; }
         .highlight-section { margin-top: 40px; padding: 25px; background-color: #005f73; border-radius: 12px; box-shadow: 0 0 16px rgba(0,0,0,0.6); color: #ffffff; }
+        /* Styles for the pool log table */
+        .pool-log-table { width: 100%; border-collapse: collapse; margin-top: 15px; color: #cccccc; }
+        .pool-log-table th, .pool-log-table td { border: 1px solid #555; padding: 8px; text-align: left; font-size: 0.9em; /* Smaller font for table */ }
+        .pool-log-table th { background-color: #004c5a; color: #ffffff; }
+        .pool-log-table tbody tr:nth-child(odd) { background-color: #333; }
+        .pool-log-table tbody tr:nth-child(even) { background-color: #2c2c2c; }
     </style>
 </head>
 <body>
@@ -24,14 +30,14 @@
         
         <section class="highlight-section">
             <h2>📢 May 1 Certification Meeting — Conflict of Interest Exposed</h2>
-            <p>Watch the full meeting where recalled directors improperly voted to reject the certification of their own recall and then made themselves the majority vote in a motion that the recall be rejected, a clear conflict of interest as recognized in multiple DBPR arbitration rulings. Florida administrative code often considers decisive votes on motions to reject recalls that only pass due to the votes of the conflicted individuals being recalled -counting their own votes in the decisive motion, to be invalid. They also attempted to use HOA funds to retain legal counsel without board approval:</p>
+            <p>Watch the full meeting where recalled directors improperly voted to reject the certification of their own recall, violating Florida Statute §720.303(10). They also attempted to use HOA funds to retain legal counsel without board approval:</p>
             <p><iframe width="100%" height="360" src="https://www.youtube.com/embed/glPjYkpzF1s" title="May 1 Recall Certification Meeting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
             <p>(If the video embed doesn't work, <a href="https://youtu.be/glPjYkpzF1s" target="_blank">click here to watch on YouTube</a>)</p>
         </section>
 
         <section class="highlight-section">
             <h2>📋 What Happens Now? (As of May 5, 2025)</h2>
-            <p>On May 1, 2025, the recalled board members improperly voted to reject the certification of their own recall. </p>
+            <p>On May 1, 2025, the recalled board members improperly voted to reject the certification of their own recall. This action violates Florida Statute §720.303(10).</p>
             <ul>
                 <li><strong>Next Step:</strong> The recalled board members have until <strong>May 8, 2025</strong> (5 business days from the May 1st meeting) to file a Petition for Recall Arbitration with the DBPR if they wish to contest the recall.</li>
                 <li><strong>If No Petition Filed by May 8:</strong> The recall becomes effective automatically, and the recalled board members are removed.</li>
@@ -73,6 +79,60 @@
             <p>📹 <strong>Watch the Department of Health Inspection:</strong><br><iframe width="100%" height="360" src="https://www.youtube.com/embed/R3HV7O0Uo9s" title="DOH Inspection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
             <p>(If the video embed doesn't work, <a href="https://youtu.be/R3HV7O0Uo9s" target="_blank">click here to watch on YouTube</a>)</p>
         </section>
+
+        <!-- Pool Log Section START -->
+        <section class="highlight-section">
+            <h2>🧪 Pool Maintenance Log</h2>
+            <p>Daily readings, actions, and notes on pool conditions:</p>
+            <!-- Table styles are in main <style> block in <head> -->
+            <div style="overflow-x:auto;"> <!-- Make table horizontally scrollable on small screens -->
+            <table class="pool-log-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>pH Test</th>
+                        <th>Free Chlorine PPM</th>
+                        <th>Corrective Action</th>
+                        <th>Treatments</th>
+                        <th>Notes / Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>May 6</td>
+                        <td>5:00 PM</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>N/A</td> <!-- Placeholder, user can update -->
+                        <td>N/A</td> <!-- Placeholder, user can update -->
+                        <td>Initial reading.</td> <!-- Placeholder, user can update -->
+                    </tr>
+                    <tr>
+                        <td>May 5</td>
+                        <td>5:00 PM</td>
+                        <td>7.4</td>
+                        <td>9.0</td>
+                        <td>None</td>
+                        <td>None</td>
+                        <td>Chlorine near DOH limit (10 ppm).</td>
+                    </tr>
+                    <tr>
+                        <td>May 4</td>
+                        <td>12:00 PM</td>
+                        <td>7.1</td>
+                        <td>7.0</td>
+                        <td>N/A</td> <!-- Placeholder, user can update -->
+                        <td>N/A</td> <!-- Placeholder, user can update -->
+                        <td>Mid-day reading.</td> <!-- Placeholder, user can update -->
+                    </tr>
+                    <!-- Add more rows here for future logs -->
+                </tbody>
+            </table>
+            </div>
+            <p><em>Logs will be updated regularly.</em></p>
+        </section>
+        <!-- Pool Log Section END -->
 
         <section class="highlight-section">
             <h2>🛡️ Facts:</h2>
