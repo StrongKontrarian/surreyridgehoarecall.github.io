@@ -1,0 +1,8 @@
+# Disable Jekyll Processing
+
+This file tells GitHub Pages to serve the repository files directly without Jekyll processing.
+This allows the Google Apps Script to update the index.html file successfully.
+
+Created: 2025-06-20
+Purpose: Fix pool chemistry table not appearing on live website
+
