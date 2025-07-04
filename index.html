@@ -429,17 +429,15 @@
     }
     .pool-log-table {
       width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      border-radius: 6px;
-      overflow: hidden;
+      border-collapse: separate;
+      border-spacing: 0 12px;  /* vertical gap between rows */
     }
     .pool-log-table th,
     .pool-log-table td {
       padding: 12px 8px;
       text-align: center;
       vertical-align: middle;
+      border: 1px solid #e0e4e8;
     }
     .pool-log-table th {
       background: #2a4d8f;
@@ -448,16 +446,24 @@
       text-transform: uppercase;
       font-size: 0.9em;
     }
-    .pool-log-table tr:nth-child(even) td {
-      background: #f7f9fc;
+    .pool-log-table tr {
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .pool-log-table td {
-      color: #333;
-      border-bottom: 1px solid #e0e4e8;
-      font-size: 0.85em;
+    .pool-log-table tr:nth-child(even) {
+      background: #f7f9fc;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    /* remove extra borders between rows */
+    .pool-log-table tr td {
+      border-top: none;
+      border-bottom: none;
+    }
+    .pool-log-table tr:first-child td {
+      border-top: 1px solid #e0e4e8;
     }
     .pool-log-table tr:last-child td {
-      border-bottom: none;
+      border-bottom: 1px solid #e0e4e8;
     }
   </style>
 
