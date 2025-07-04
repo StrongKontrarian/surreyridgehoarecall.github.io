@@ -441,13 +441,15 @@
     }
     .pool-log-table th {
       background: linear-gradient(to bottom, #2a4d8f, #1a305e);
-      color: #fff;
+      color: #fff !important;
       padding:12px;
       font-weight:600;
       text-shadow:0 1px 2px rgba(0,0,0,0.3);
       position:sticky;
       top:0;
       z-index:2;
+      text-transform: uppercase;
+      font-size: 0.9em;
     }
     .pool-log-table td {
       background: #ffffff;
@@ -456,7 +458,7 @@
       text-align:center;
       vertical-align:middle;
       border-bottom:1px solid #e0e4e8;
-      font-size:0.9em;
+      font-size:0.85em;
     }
     .pool-log-table tr:nth-child(even) td {
       background: #f7f9fc;
@@ -473,6 +475,29 @@
   <div class="pool-log-wrapper">
     <table class="pool-log-table">
       <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+          <th>pH</th>
+          <th>Cl₂ PPM</th>
+          <th>Comb Cl₂ PPM</th>
+          <th>Vacuum</th>
+          <th>Influent PSI</th>
+          <th>Effluent PSI</th>
+          <th>Flow GPM</th>
+          <th>Backwash</th>
+          <th>Vacuumed</th>
+          <th>Water Level</th>
+          <th>Swimmers?</th>
+          <th>Alkalinity</th>
+          <th>Hardness</th>
+          <th>CYA</th>
+          <th>TDS</th>
+          <th>Phosphate</th>
+          <th>Actions</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
     <tbody>
         <tr>
             <td>Jul 3</td>
