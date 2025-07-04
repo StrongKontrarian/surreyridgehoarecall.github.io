@@ -418,74 +418,187 @@
     </section>
 
 <!-- Pool Log Section START -->
-<section class="highlight-section" style="background:#085b67; padding:30px; border-radius:8px; color:#fff;">
-  <h2 style="text-align:center; margin-bottom:20px;">Pool Maintenance Log</h2>
-  <p style="text-align:center; margin-bottom:20px;">Daily readings, actions, and notes on pool conditions:</p>
+<section class="highlight-section" style="background: linear-gradient(135deg, #085b67 0%, #0a6b78 100%); padding: 40px; border-radius: 16px; color: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+  <h2 style="text-align: center; margin-bottom: 10px; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Pool Maintenance Log</h2>
+  <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">Daily readings, actions, and notes on pool conditions</p>
 
   <style>
     .pool-log-container {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      overflow-x: auto;
+      background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+      border-radius: 20px;
+      box-shadow: 
+        0 20px 40px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+      overflow: hidden;
       margin: 0 auto;
+      border: 1px solid rgba(255,255,255,0.2);
     }
+    
+    .pool-log-wrapper {
+      overflow-x: auto;
+      padding: 20px;
+    }
+    
     .pool-log-table {
       width: 100%;
-      border-collapse: collapse;
-      min-width: 800px;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+      min-width: 1200px;
     }
-    .pool-log-table th,
-    .pool-log-table td {
-      padding: 12px 8px;
+    
+    .pool-log-table th {
+      background: linear-gradient(145deg, #1e40af, #3b82f6);
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      letter-spacing: 0.5px;
+      padding: 16px 12px;
       text-align: center;
       vertical-align: middle;
-      border: 1px solid #ddd;
-      color: #333;
+      border: none;
+      box-shadow: 
+        0 4px 8px rgba(30, 64, 175, 0.3),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+      position: relative;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    .pool-log-table th:first-child {
+      border-radius: 12px 0 0 12px;
+    }
+    
+    .pool-log-table th:last-child {
+      border-radius: 0 12px 12px 0;
+    }
+    
+    .pool-log-table td {
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+      color: #1f2937;
+      padding: 14px 10px;
+      text-align: center;
+      vertical-align: middle;
+      border: none;
       font-size: 0.9em;
+      font-weight: 500;
+      box-shadow: 
+        0 2px 8px rgba(0,0,0,0.08),
+        0 1px 3px rgba(0,0,0,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .pool-log-table th {
-      background: #2a4d8f;
+    
+    .pool-log-table tr td:first-child {
+      border-radius: 12px 0 0 12px;
+      font-weight: 700;
+      background: linear-gradient(145deg, #dbeafe, #bfdbfe);
+      color: #1e40af;
+    }
+    
+    .pool-log-table tr td:last-child {
+      border-radius: 0 12px 12px 0;
+    }
+    
+    .pool-log-table tbody tr:hover td {
+      background: linear-gradient(145deg, #fef3c7, #fde68a);
+      box-shadow: 
+        0 8px 25px rgba(0,0,0,0.15),
+        0 3px 10px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+      transform: translateY(-2px);
+      color: #92400e;
+    }
+    
+    .pool-log-table tbody tr:hover td:first-child {
+      background: linear-gradient(145deg, #fbbf24, #f59e0b);
       color: #fff;
-      font-weight: 600;
-      text-transform: uppercase;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
-    .pool-log-table tr:nth-child(even) {
-      background: #f9f9f9;
+    
+    /* Special highlighting for important values */
+    .pool-log-table .highlight-red {
+      background: linear-gradient(145deg, #fee2e2, #fecaca) !important;
+      color: #dc2626 !important;
+      font-weight: 700;
+      box-shadow: 
+        0 4px 12px rgba(220, 38, 38, 0.2),
+        inset 0 1px 0 rgba(255,255,255,0.8);
     }
-    .pool-log-table tr:hover {
-      background: #eef2f7;
+    
+    .pool-log-table .highlight-green {
+      background: linear-gradient(145deg, #dcfce7, #bbf7d0) !important;
+      color: #16a34a !important;
+      font-weight: 700;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .pool-log-wrapper {
+        padding: 15px;
+      }
+      
+      .pool-log-table th,
+      .pool-log-table td {
+        padding: 10px 6px;
+        font-size: 0.8em;
+      }
+    }
+    
+    /* Loading animation effect */
+    .pool-log-table tbody tr {
+      animation: slideInUp 0.6s ease-out;
+      animation-fill-mode: both;
+    }
+    
+    .pool-log-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+    .pool-log-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+    .pool-log-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+    .pool-log-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+    .pool-log-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+    
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 
   <div class="pool-log-container">
-    <table class="pool-log-table">
-      <thead>
-        <tr>
-          <th>Day</th>
-          <th>Time</th>
-          <th>pH</th>
-          <th>Cl₂ PPM</th>
-          <th>Comb Cl₂</th>
-          <th>Vacuum</th>
-          <th>Influent PSI</th>
-          <th>Effluent PSI</th>
-          <th>Flow GPM</th>
-          <th>Backwash</th>
-          <th>Vacuumed</th>
-          <th>Water Level</th>
-          <th>Swimmers?</th>
-          <th>Alk PPM</th>
-          <th>Hardness</th>
-          <th>CYA</th>
-          <th>TDS</th>
-          <th>Phosphate</th>
-          <th>Actions</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-    <tbody>
-        <tr>
+    <div class="pool-log-wrapper">
+      <table class="pool-log-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>pH</th>
+            <th>Cl₂ PPM</th>
+            <th>Comb Cl₂</th>
+            <th>Vacuum</th>
+            <th>Influent PSI</th>
+            <th>Effluent PSI</th>
+            <th>Flow GPM</th>
+            <th>Backwash</th>
+            <th>Vacuumed</th>
+            <th>Water Level</th>
+            <th>Swimmers?</th>
+            <th>Alk PPM</th>
+            <th>Hardness</th>
+            <th>CYA</th>
+            <th>TDS</th>
+            <th>Phosphate</th>
+            <th>Actions</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Sample rows to demonstrate the 3D effect -->
+          <tr>
             <td>Jul 3</td>
             <td>12:00 PM</td>
             <td>7.5</td>
@@ -506,8 +619,8 @@
             <td>500PPB</td>
             <td>Acid On</td>
             <td>Chlorine Speed Reduced</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Jul 2</td>
             <td>11:00 AM</td>
             <td>7.5</td>
@@ -528,8 +641,8 @@
             <td>500PPB</td>
             <td>Acid On</td>
             <td>Tapering Down Chlorine</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Jul 1</td>
             <td>10:00 AM</td>
             <td>7.6</td>
@@ -550,8 +663,8 @@
             <td>450PPB</td>
             <td>Acid On</td>
             <td>Tapering Down Chlorine</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Jun 30</td>
             <td>11:00 AM</td>
             <td>7.5</td>
@@ -572,8 +685,8 @@
             <td>400PPB</td>
             <td>Acid Off</td>
             <td>Added 2.5gal chlorine to charge CYA</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Jun 29</td>
             <td>12:00 PM</td>
             <td>7.5</td>
@@ -1827,16 +1940,39 @@
             <td>N/A</td>
             <td><strong style="color: #ff4444;">Chemical tanks empty</strong></td>
         </tr>
-          </tbody>
-    </table>
+          <tr>
+            <td>May 4</td>
+            <td>12:00 PM</td>
+            <td>7.1</td>
+            <td>7</td>
+            <td>0.5</td>
+            <td>-13</td>
+            <td>3.2psi</td>
+            <td>-3.0psi</td>
+            <td>120gpm</td>
+            <td>No</td>
+            <td>No</td>
+            <td>0"</td>
+            <td>8</td>
+            <td>80</td>
+            <td>200</td>
+            <td>40</td>
+            <td>1100</td>
+            <td>300</td>
+            <td class="highlight-red">Chemical tanks empty</td>
+            <td class="highlight-red">AlwaysClear employee dumped chemicals into skimmers</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-
-  <p style="text-align:center; margin-top:20px; font-style:italic; color:#e0f7fa;">
-    Logs will be updated regularly.
+  
+  <p style="text-align: center; margin-top: 25px; font-style: italic; opacity: 0.8; font-size: 0.95em;">
+    Logs updated regularly with professional monitoring standards
   </p>
 </section>
-</section>
 <!-- Pool Log Section END -->
+
 
         <div class="action-buttons">
             <a class="button" href="https://drive.google.com/file/d/1M-vG6vbVwXkb466OmivAzI_gJFjxKe-v/view" target="_blank">View Proxy Form Used</a>
