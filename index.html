@@ -418,49 +418,51 @@
     </section>
 
 <!-- Pool Log Section START -->
-<section class="highlight-section">
-  <h2 style="text-align: center;">Pool Maintenance Log</h2>
-  <p>Daily readings, actions, and notes on pool conditions:</p>
+<section class="highlight-section" style="background:#085b67; padding:30px; border-radius:8px; color:#fff;">
+  <h2 style="text-align:center; margin-bottom:20px;">Pool Maintenance Log</h2>
+  <p style="text-align:center; margin-bottom:20px;">Daily readings, actions, and notes on pool conditions:</p>
 
-  <!-- Modern 3D-style table CSS -->
   <style>
     .pool-log-wrapper {
       perspective: 800px;
-      margin: 20px 0;
+      margin: 0 auto;
+      overflow-x: auto;
     }
     .pool-log-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
       transform: rotateX(3deg);
-      transform-origin: top;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transform-origin: top center;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
       border-radius: 8px;
       overflow: hidden;
+      background:#fff;
     }
     .pool-log-table th {
-      background: linear-gradient(to bottom, #4e73df, #224abe);
+      background: linear-gradient(to bottom, #2a4d8f, #1a305e);
       color: #fff;
-      padding: 12px;
-      text-align: center;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-      font-weight: 600;
-      position: sticky;
-      top: 0;
-      z-index: 2;
+      padding:12px;
+      font-weight:600;
+      text-shadow:0 1px 2px rgba(0,0,0,0.3);
+      position:sticky;
+      top:0;
+      z-index:2;
     }
     .pool-log-table td {
-      background: #fff;
-      padding: 12px;
-      text-align: center;
-      vertical-align: middle;
-      border-bottom: 1px solid #e2e8f0;
+      background: #ffffff;
+      color: #333;
+      padding:12px;
+      text-align:center;
+      vertical-align:middle;
+      border-bottom:1px solid #e0e4e8;
+      font-size:0.9em;
     }
     .pool-log-table tr:nth-child(even) td {
       background: #f7f9fc;
     }
     .pool-log-table tr:last-child td {
-      border-bottom: none;
+      border-bottom:none;
     }
     .pool-log-wrapper:hover .pool-log-table {
       transform: rotateX(0deg);
@@ -468,17 +470,9 @@
     }
   </style>
 
-  <div class="pool-log-wrapper" style="overflow-x:auto;">
+  <div class="pool-log-wrapper">
     <table class="pool-log-table">
       <thead>
-        <tr>
-          <th>Day</th><th>Time</th><th>pH</th><th>Cl₂ PPM</th><th>Comb Cl₂ PPM</th>
-          <th>Vacuum in/Hg</th><th>Influent PSI</th><th>Effluent PSI</th><th>Flow GPM</th>
-          <th>Backwashed</th><th>Vacuumed</th><th>Water Level</th><th>Swimmers?</th>
-          <th>Alkalinity</th><th>Hardness</th><th>CYA</th><th>TDS</th><th>Phosphate</th>
-          <th>Actions</th><th>Notes</th>
-        </tr>
-      </thead>
     <tbody>
         <tr>
             <td>Jul 3</td>
