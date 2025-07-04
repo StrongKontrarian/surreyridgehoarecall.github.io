@@ -419,12 +419,50 @@
 
 <!-- Pool Log Section START -->
 <section class="highlight-section">
-<h2>Pool Maintenance Log</h2>
-<p>Daily readings, actions, and notes on pool conditions:</p>
-<!-- Table styles are in main <style> block in <head> -->
-<div style="overflow-x:auto;"> <!-- Make table horizontally scrollable on small screens -->
+  <h2 style="text-align: center;">Pool Maintenance Log</h2>
+  <p>Daily readings, actions, and notes on pool conditions:</p>
+
+  <!-- add this style block here or move into your main <head> -->
+  <style>
+    .pool-log-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pool-log-table th,
+    .pool-log-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+
+  <div style="overflow-x:auto;">
     <table class="pool-log-table">
-        <thead>
+      <thead>
+        <tr>
+          <th>Day of Month</th>
+          <th>Time of Test</th>
+          <th>pH Test</th>
+          <th>Free Chlorine PPM</th>
+          <th>Combined Chlorine PPM</th>
+          <th>Vacuum in/Hg</th>
+          <th>Influent Pressure PSI</th>
+          <th>Effluent Pressure PSI</th>
+          <th>Flow GPM</th>
+          <th>Backwashed Filters</th>
+          <th>Vacuumed</th>
+          <th>Water Level</th>
+          <th>Swimmers Present?</th>
+          <th>Total Alkalinity PPM</th>
+          <th>Calcium Hardness PPM</th>
+          <th>Cyanuric Acid PPM</th>
+          <th>Total Dissolved Solids PPM</th>
+          <th>Phosphate PPB</th>
+          <th>Corrective Actions</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
             <tr>
                 <th style="text-align:center; vertical-align:middle;">Day of Month</th>
                 <th style="text-align:center; vertical-align:middle;">Time of Test</th>
