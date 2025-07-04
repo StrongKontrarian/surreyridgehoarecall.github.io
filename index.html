@@ -422,47 +422,63 @@
   <h2 style="text-align: center;">Pool Maintenance Log</h2>
   <p>Daily readings, actions, and notes on pool conditions:</p>
 
-  <!-- add this style block here or move into your main <head> -->
+  <!-- Modern 3D-style table CSS -->
   <style>
+    .pool-log-wrapper {
+      perspective: 800px;
+      margin: 20px 0;
+    }
     .pool-log-table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
+      transform: rotateX(3deg);
+      transform-origin: top;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      overflow: hidden;
     }
-    .pool-log-table th,
+    .pool-log-table th {
+      background: linear-gradient(to bottom, #4e73df, #224abe);
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
     .pool-log-table td {
-      border: 1px solid #ccc;
-      padding: 8px;
+      background: #fff;
+      padding: 12px;
       text-align: center;
       vertical-align: middle;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .pool-log-table tr:nth-child(even) td {
+      background: #f7f9fc;
+    }
+    .pool-log-table tr:last-child td {
+      border-bottom: none;
+    }
+    .pool-log-wrapper:hover .pool-log-table {
+      transform: rotateX(0deg);
+      transition: transform 0.4s ease;
     }
   </style>
 
-  <div style="overflow-x:auto;">
+  <div class="pool-log-wrapper" style="overflow-x:auto;">
     <table class="pool-log-table">
       <thead>
-            <tr>
-                <th style="text-align:center; vertical-align:middle;">Day of Month</th>
-                <th style="text-align:center; vertical-align:middle;">Time of Test</th>
-                <th style="text-align:center; vertical-align:middle;">pH Test</th>
-                <th style="text-align:center; vertical-align:middle;">Free Chlorine PPM</th>
-                <th style="text-align:center; vertical-align:middle;">Combined Chlorine PPM</th>
-                <th style="text-align:center; vertical-align:middle;">Vacuum in/Hg</th>
-                <th style="text-align:center; vertical-align:middle;">Influent Pressure PSI</th>
-                <th style="text-align:center; vertical-align:middle;">Effluent Pressure PSI</th>
-                <th style="text-align:center; vertical-align:middle;">Flow GPM</th>
-                <th style="text-align:center; vertical-align:middle;">Backwashed Filters</th>
-                <th style="text-align:center; vertical-align:middle;">Vacuumed</th>
-                <th style="text-align:center; vertical-align:middle;">Water Level</th>
-                <th style="text-align:center; vertical-align:middle;">Swimmers Present?</th>
-                <th style="text-align:center; vertical-align:middle;">Total Alkalinity PPM</th>
-                <th style="text-align:center; vertical-align:middle;">Calcium Hardness PPM</th>
-                <th style="text-align:center; vertical-align:middle;">Cyanuric Acid PPM</th>
-                <th style="text-align:center; vertical-align:middle;">Total Dissolved Solids PPM</th>
-                <th style="text-align:center; vertical-align:middle;">Phosphate PPB</th>
-                <th style="text-align:center; vertical-align:middle;">Corrective Actions</th>
-                <th style="text-align:center; vertical-align:middle;">Notes</th>
-            </tr>
-        </thead>
+        <tr>
+          <th>Day</th><th>Time</th><th>pH</th><th>Cl₂ PPM</th><th>Comb Cl₂ PPM</th>
+          <th>Vacuum in/Hg</th><th>Influent PSI</th><th>Effluent PSI</th><th>Flow GPM</th>
+          <th>Backwashed</th><th>Vacuumed</th><th>Water Level</th><th>Swimmers?</th>
+          <th>Alkalinity</th><th>Hardness</th><th>CYA</th><th>TDS</th><th>Phosphate</th>
+          <th>Actions</th><th>Notes</th>
+        </tr>
+      </thead>
     <tbody>
         <tr>
             <td>Jul 3</td>
