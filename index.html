@@ -423,53 +423,68 @@
   <p style="text-align:center; margin-bottom:20px;">Daily readings, actions, and notes on pool conditions:</p>
 
   <style>
-    .pool-log-wrapper {
+    .pool-log-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       overflow-x: auto;
       margin: 0 auto;
     }
     .pool-log-table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 12px;  /* vertical gap between rows */
+      border-collapse: collapse;
+      min-width: 800px;
     }
     .pool-log-table th,
     .pool-log-table td {
       padding: 12px 8px;
       text-align: center;
       vertical-align: middle;
-      border: 1px solid #e0e4e8;
+      border: 1px solid #ddd;
+      color: #333;
+      font-size: 0.9em;
     }
     .pool-log-table th {
       background: #2a4d8f;
       color: #fff;
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 0.9em;
-    }
-    .pool-log-table tr {
-      background: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .pool-log-table tr:nth-child(even) {
-      background: #f7f9fc;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      background: #f9f9f9;
     }
-    /* remove extra borders between rows */
-    .pool-log-table tr td {
-      border-top: none;
-      border-bottom: none;
-    }
-    .pool-log-table tr:first-child td {
-      border-top: 1px solid #e0e4e8;
-    }
-    .pool-log-table tr:last-child td {
-      border-bottom: 1px solid #e0e4e8;
+    .pool-log-table tr:hover {
+      background: #eef2f7;
     }
   </style>
 
-  <div class="pool-log-wrapper">
+  <div class="pool-log-container">
     <table class="pool-log-table">
       <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+          <th>pH</th>
+          <th>Cl₂ PPM</th>
+          <th>Comb Cl₂</th>
+          <th>Vacuum</th>
+          <th>Influent PSI</th>
+          <th>Effluent PSI</th>
+          <th>Flow GPM</th>
+          <th>Backwash</th>
+          <th>Vacuumed</th>
+          <th>Water Level</th>
+          <th>Swimmers?</th>
+          <th>Alk PPM</th>
+          <th>Hardness</th>
+          <th>CYA</th>
+          <th>TDS</th>
+          <th>Phosphate</th>
+          <th>Actions</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr>
           <th>Day</th>
           <th>Time</th>
