@@ -164,6 +164,106 @@
             color: #ffffff;
             margin-top: 40px;
         }
+        
+        /* Navigation Boxes Styles */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-box {
+            width: 120px;
+            height: 120px;
+            background: #333333;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-box:hover {
+            background: #4a4a4a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border-color: #4a90e2;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .nav-box img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .nav-box .title {
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2;
+            padding: 0 5px;
+        }
+        
+        .nav-box.center-box {
+            width: 140px;
+            height: 140px;
+            background: #2c2c2c;
+            border: 2px solid #444444;
+        }
+        
+        .nav-box.center-box:hover {
+            background: #3a3a3a;
+            border-color: #555555;
+        }
+        
+        .nav-box.center-box img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .nav-box.center-box .title {
+            font-size: 12px;
+            color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                gap: 10px;
+            }
+            .nav-box {
+                width: 100px;
+                height: 100px;
+            }
+            .nav-box img {
+                width: 50px;
+                height: 50px;
+            }
+            .nav-box .title {
+                font-size: 10px;
+            }
+            .nav-box.center-box {
+                width: 120px;
+                height: 120px;
+            }
+            .nav-box.center-box img {
+                width: 70px;
+                height: 70px;
+            }
+        }
 </style>
     <!-- Last updated: 2025-07-04T20:33:24.563Z -->
     <!-- Last updated: 2025-07-07T03:02:25.537Z -->
@@ -172,7 +272,51 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/main/SurreyLogo.jpg" alt="Surrey Ridge Logo" class="logo" />
+            <!-- Navigation Boxes -->
+            <div class="nav-container">
+                <!-- Box 1: Surrey Ridge Community Pool -->
+                <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ" target="_blank" class="nav-box">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/pool_avatar.png" alt="Pool" />
+                    <div class="title">Surrey Ridge Community Pool</div>
+                </a>
+                
+                <!-- Box 2: June 16th Board Meeting Videos -->
+                <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqUiTt0aQ8oAEHD631fG_tQ7" target="_blank" class="nav-box">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/board_meeting_avatar.png" alt="Board Meeting" />
+                    <div class="title">June 16th Board Meeting Videos</div>
+                </a>
+                
+                <!-- Box 3: Video Documentation -->
+                <a href="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/video_gallery_FINAL_ALL_VIDEOS.html" target="_blank" class="nav-box">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/video_documentation_avatar.png" alt="Video Documentation" />
+                    <div class="title">Video Documentation</div>
+                </a>
+                
+                <!-- Box 4: Center Box (Return to Index) -->
+                <a href="index.html" class="nav-box center-box">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/SurreyLogo.jpg" alt="Surrey Ridge Logo" />
+                    <div class="title">Home</div>
+                </a>
+                
+                <!-- Box 5: Morgan Property Solutions Failures -->
+                <a href="#" class="nav-box" onclick="alert('Page coming soon!'); return false;">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/morgan_property_avatar_dark.png" alt="Morgan Property" />
+                    <div class="title">Morgan Property Solutions Failures</div>
+                </a>
+                
+                <!-- Box 6: Evidence of Illegitimate Board Formation -->
+                <a href="#" class="nav-box" onclick="alert('Page coming soon!'); return false;">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/evidence_avatar_dark.png" alt="Evidence" />
+                    <div class="title">Evidence of Illegitimate Board Formation</div>
+                </a>
+                
+                <!-- Box 7: Gaslighting and Lies to Homeowners -->
+                <a href="#" class="nav-box" onclick="alert('Page coming soon!'); return false;">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/gaslighting_avatar.png" alt="Gaslighting" />
+                    <div class="title">Gaslighting and Lies to Homeowners</div>
+                </a>
+            </div>
+            
             <h1>Surrey Ridge HOA Recall - Both Legal Recall Methods Executed!</h1>
             <p style="text-align: center; font-size: 1.2em;">On <strong>April 25, 2025</strong>, Surrey Ridge homeowners overwhelmingly voted to recall President Janelle Marazon, Treasurer Erica Tirado, and Director Tom Franzen.</p>
             <p style="text-align: center; font-size: 1.2em;">On <strong>June 27th, 2025</strong>, Surrey Ridge homeowners overwhelmingly voted to recall President Janelle Marazon, Treasurer Erica Tirado, Director Tom Franzen and Director Darwin Johnson. Darwin Johnson was added to the written recall ballot and overwhelmingly voted to be removed from the board in part due to his participation, in colluding with the three recalled directors to form the majority vote necessary (4/7) to send the recall into DBPR arbitration costing homeowners tens of thousands of dollars that would've otherwise been spent for the betterment of the community. The selfish act and disregard for the majority will of homeowners is precisely why in record time homeowners voted to remove Darwin Johnson, along with the three previous directors subject to recall. Their self-serving decisions have been a violation of fiduciary duty to the association and its membership. Their decisions to put themselves over the will of the homeowner majority has wasted nearly half of the annual budget for the entire association. Let that sink in. A projected $23,000.00 or so in order to pompously delay their removal by a few weeks at the cost all 145 homeowners X 6 months dues just set on fire.</p>
