@@ -488,6 +488,70 @@
                     Real-time monitoring and analysis of pool chemistry for optimal safety and compliance
                 </p>
             </section>
+          
+<section class="highlight-section">
+  <h2>CPO Costs and Reimbursements</h2>
+  <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">
+    Comprehensive CPO costs, out of pocket expenses and lag time for reimbursement
+  </p>
+
+  <div id="cpo-reimbursements-table"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv";
+
+    fetch(csvUrl)
+      .then(response => response.text())
+      .then(csvText => {
+        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+        let data = parsed.data;
+        data = data.reverse();
+
+        const headers = Object.keys(data[0]).map(h => h.trim().toLowerCase());
+        const typeIdx = headers.indexOf("type");
+        const lagIdx = headers.findIndex(h => h.includes("lagtime"));
+
+        let html = '<table class="pool-log-table"><thead><tr>';
+        Object.keys(data[0]).forEach(header => {
+          html += `<th>${header}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+        data.forEach(row => {
+          let rowClass = "";
+          let rowStyle = "";
+          const type = row[Object.keys(row)[typeIdx]] ? row[Object.keys(row)[typeIdx]].toLowerCase() : "";
+          const lagRaw = row[Object.keys(row)[lagIdx]];
+          const lag = parseInt(lagRaw);
+
+          if (type.includes("reimbursement")) {
+            rowClass = "reimbursement-row";
+            rowStyle = 'background-color: #e5f0ff;';
+          } else if (!isNaN(lag)) {
+            if (lag > 4) {
+              rowClass = "lag-red";
+              rowStyle = 'background-color: #ffe5e5;';
+            } else {
+              rowClass = "lag-green";
+              rowStyle = 'background-color: #e6ffe5;';
+            }
+          }
+          html += `<tr class="cpo-highlight ${rowClass}" style="${rowStyle}">`;
+          Object.values(row).forEach(cell => {
+            html += `<td>${cell || ""}</td>`;
+          });
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+        document.getElementById('cpo-reimbursements-table').innerHTML = html;
+      })
+      .catch(error => {
+        document.getElementById('cpo-reimbursements-table').innerHTML = "Failed to load data.";
+        console.error(error);
+      });
+    
+  </script>
+</section>
 
             <!-- Scott Davis Pool Maintenance Section -->
             <section class="highlight-section">
