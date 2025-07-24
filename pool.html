@@ -371,6 +371,40 @@
                 transform: translateY(0);
             }
         }
+      /* Make the shadowbox/header responsive */
+.shadowbox, .header {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 700px) {
+  .shadowbox, .header {
+    padding: 10px 2vw;
+    font-size: 1.1em;
+    min-width: 0;
+  }
+  .shadowbox h1, .header h1 {
+    font-size: 1.3em;
+    text-align: center;
+    word-break: break-word;
+  }
+  /* If you have a button row, make it stack or scroll */
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .button-row button, .button-row a {
+    flex: 1 1 100px;
+    min-width: 80px;
+    margin: 4px 0;
+  }
+}
     </style>
     <!-- Last updated: 2025-07-24T18:43:09.014Z -->
     <!-- Last updated: 2025-07-24T18:44:15.220Z -->
