@@ -2,404 +2,413 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surrey Ridge Community Pool - Maintenance, Issues & Documentation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-    body { 
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; 
-        background-color: #1e1e1e; 
-        margin: 0; 
-        padding: 20px; 
-        color: #e0e0e0;
-        font-weight: 400;
-        line-height: 1.6;
-    }
-    .container { 
-        max-width: 1900px; 
-        margin: 0 auto;
-        padding: 30px;
-        background: #2c2c2c;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    }
-    .header { 
-        text-align: center;
-        margin-bottom: 40px;
-        width: 100%;
-    }
-    img.logo {
-        max-width: 180px;
-        margin: 0 auto 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-    h1, h2 {
-        color: #ffff;
-        font-weight: 600;
-        letter-spacing: -0.025em;
-    }
-    h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-    h2 {
-        font-size: 1.875rem;
-        font-weight: 600;
-    }
-    h3 {
-        font-weight: 500;
-        font-size: 1.25rem;
-        letter-spacing: -0.015em;
-        color: #ffff;
-        margin-top: 25px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .main-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin-top: 40px;
-    }
-    .section {
-        background: #3333;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        margin-bottom: 30px;
-    }
-    .section h2 {
-        color: #4a90e2;
-        border-bottom: 2px solid #4a90e2;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .section h3 {
-        color: #ffff;
-        margin-top: 25px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    p, ul, li {
-        font-size: 1.1em;
-        line-height: 1.6;
-        color: #cccc;
-        text-align: left;
-    }
-    a {
-        color: #4a90e2;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    .highlight-section {
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-        padding: 40px;
-        border-radius: 16px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        margin-bottom: 40px;
-        color: #ffff;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .highlight-section h2 {
-        text-align: center;
-        font-size: 2.2em;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        margin-bottom: 20px;
-        border: none;
-        color: #ffff;
-    }
-    .highlight-section h3 {
-        text-align: center;
-    }
-    .video-container {
-        margin: 20px 0;
-    }
-    iframe {
-        width: 100%;
-        height: 360px;
-        border-radius: 8px;
-    }
-
-    /* Navigation Boxes Styles */
-    .nav-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        margin: 30px 0;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .nav-box {
-        width: 120px;
-        height: 120px;
-        background: #3333;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: #e0e0e0;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        border: 2px solid transparent;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .nav-box:hover {
-        background: #4a4a4a;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-        border-color: #4a90e2;
-        color: #ffff;
-        text-decoration: none;
-    }
-
-    .nav-box img {
-        width: 60px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 8px;
-    }
-
-    .nav-box .title {
-        font-size: 11px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 1.2;
-        padding: 0 5px;
-    }
-
-    .nav-box.center-box {
-        width: 140px;
-        height: 140px;
-        background: #2c2c2c;
-        border: 2px solid #4444;
-    }
-
-    .nav-box.center-box:hover {
-        background: #3a3a3a;
-        border-color: #5555;
-    }
-
-    .nav-box.center-box img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .nav-box.center-box .title {
-        font-size: 12px;
-        color: #ffff;
-    }
-
-    .nav-box.current-page {
-        background: linear-gradient(145deg, #4a90e2, #357ab8);
-        border-color: #4a90e2;
-        color: #ffff;
-    }
-
-    /* Pool Log Styles */
-    .pool-log-container {
-        background: linear-gradient(145deg, #f8fafc, #e2e8f0);
-        border-radius: 20px;
-        box-shadow: 
-            0 20px 40px rgba(0,0,0,0.1),
-            inset 0 1px 0 rgba(255,255,255,0.6);
-        overflow: hidden;
-        margin: 0 auto;
-        border: 1px solid rgba(255,255,255,0.2);
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .pool-log-wrapper {
-        overflow-x: auto;
-        padding: 20px;
-    }
-
-    .pool-log-table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0 8px;
-        min-width: 1200px;
-    }
-
-    .pool-log-table th {
-        background: linear-gradient(145deg, #1e40af, #3b82f6);
-        color: #fff;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 0.85em;
-        letter-spacing: 0.5px;
-        padding: 16px 12px;
-        text-align: center;
-        vertical-align: middle;
-        border: none;
-        box-shadow: 
-            0 4px 8px rgba(30, 64, 175, 0.3),
-            inset 0 1px 0 rgba(255,255,255,0.2);
-        position: relative;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-
-    .pool-log-table th:first-child {
-        border-radius: 12px 0 0 12px;
-    }
-
-    .pool-log-table th:last-child {
-        border-radius: 0 12px 12px 0;
-    }
-
-    .pool-log-table td {
-        background: linear-gradient(145deg, #ffff, #f8fafc);
-        color: #1f2937;
-        padding: 14px 10px;
-        text-align: center;
-        vertical-align: middle;
-        border: none;
-        font-size: 0.9em;
-        font-weight: 500;
-        box-shadow: 
-            0 2px 8px rgba(0,0,0,0.08),
-            0 1px 3px rgba(0,0,0,0.06),
-            inset 0 1px 0 rgba(255,255,255,0.8);
-        position: relative;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .pool-log-table tr td:first-child {
-        border-radius: 12px 0 0 12px;
-        font-weight: 700;
-        background: linear-gradient(145deg, #dbeafe, #bfdbfe);
-        color: #1e40af;
-    }
-
-    .pool-log-table tr td:last-child {
-        border-radius: 0 12px 12px 0;
-    }
-
-    .pool-log-table tbody tr:hover td {
-        background: linear-gradient(145deg, #fef3c7, #fde68a);
-        box-shadow: 
-            0 8px 25px rgba(0,0,0,0.15),
-            0 3px 10px rgba(0,0,0,0.1),
-            inset 0 1px 0 rgba(255,255,255,0.9);
-        transform: translateY(-2px);
-        color: #92400e;
-    }
-
-    .pool-log-table tbody tr:hover td:first-child {
-        background: linear-gradient(145deg, #fbbf24, #f59e0b);
-        color: #fff;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-
-    .pool-log-table .highlight-red {
-        background: linear-gradient(145deg, #fee2e2, #fecaca) !important;
-        color: #dc2626 !important;
-        font-weight: 700;
-        box-shadow: 
-            0 4px 12px rgba(220, 38, 38, 0.2),
-            inset 0 1px 0 rgba(255,255,255,0.8);
-    }
-
-    .pool-log-table .highlight-green {
-        background: linear-gradient(145deg, #dcfce7, #bbf7d0) !important;
-        color: #16a34a !important;
-        font-weight: 700;
-    }
-
-    /* Loading animation effect */
-    .pool-log-table tbody tr {
-        animation: slideInUp 0.6s ease-out;
-        animation-fill-mode: both;
-    }
-
-    .pool-log-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
-    .pool-log-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
-    .pool-log-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
-    .pool-log-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
-    .pool-log-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
-
-    @keyframes slideInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; 
+            background-color: #1e1e1e; 
+            margin: 0; 
+            padding: 20px; 
+            color: #e0e0e0;
+            font-weight: 400;
+            line-height: 1.6;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        .container { 
+            max-width: 1900px; 
+            margin: 0 auto;
+            padding: 30px;
+            background: #2c2c2c;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1900px) {
-        body {
-            padding: 10px;
+        .header { 
+            text-align: center;
+            margin-bottom: 40px;
         }
-        .container {
-            padding: 20px;
+        img.logo {
+            max-width: 180px;
+            margin: 0 auto 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
-        .nav-container {
-            gap: 10px;
-        }
-        .nav-box {
-            width: 100px;
-            height: 100px;
-        }
-        .nav-box img {
-            width: 50px;
-            height: 50px;
-        }
-        .nav-box .title {
-            font-size: 10px;
-        }
-        .nav-box.center-box {
-            width: 120px;
-            height: 120px;
-        }
-        .nav-box.center-box img {
-            width: 70px;
-            height: 70px;
-        }
-        iframe {
-            height: 250px;
-        }
-        .pool-log-wrapper {
-            padding: 15px;
-        }
-        .pool-log-table th,
-        .pool-log-table td {
-            padding: 10px 6px;
-            font-size: 0.8em;
+        h1, h2 {
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: -0.025em;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.875rem;
+            font-weight: 600;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: -0.015em;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .section {
+            background: #333333;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #4a90e2;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section h3 {
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        p, ul, li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #cccccc;
+            text-align: left;
+        }
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .highlight-section {
-            padding: 30px 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+            color: #ffffff;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         .highlight-section h2 {
-            font-size: 1.8em;
+            text-align: center;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
         }
-    }
+        .highlight-section h3 {
+            text-align: center;
+        }
+        .video-container {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 360px;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            iframe {
+                height: 250px;
+            }
+        }
+        
+        /* Navigation Boxes Styles */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-box {
+            width: 120px;
+            height: 120px;
+            background: #333333;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-box:hover {
+            background: #4a4a4a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border-color: #4a90e2;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .nav-box img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .nav-box .title {
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2;
+            padding: 0 5px;
+        }
+        
+        .nav-box.center-box {
+            width: 140px;
+            height: 140px;
+            background: #2c2c2c;
+            border: 2px solid #444444;
+        }
+        
+        .nav-box.center-box:hover {
+            background: #3a3a3a;
+            border-color: #555555;
+        }
+        
+        .nav-box.center-box img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .nav-box.center-box .title {
+            font-size: 12px;
+            color: #ffffff;
+        }
+        
+        .nav-box.current-page {
+            background: linear-gradient(145deg, #4a90e2, #357ab8);
+            border-color: #4a90e2;
+            color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                gap: 10px;
+            }
+            .nav-box {
+                width: 100px;
+                height: 100px;
+            }
+            .nav-box img {
+                width: 50px;
+                height: 50px;
+            }
+            .nav-box .title {
+                font-size: 10px;
+            }
+            .nav-box.center-box {
+                width: 120px;
+                height: 120px;
+            }
+            .nav-box.center-box img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        /* Pool Log Styles */
+        .pool-log-container {
+            background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.6);
+            overflow: hidden;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .pool-log-wrapper {
+            overflow-x: auto;
+            padding: 20px;
+        }
+        
+        .pool-log-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            min-width: 1200px;
+        }
+        
+        .pool-log-table th {
+            background: linear-gradient(145deg, #1e40af, #3b82f6);
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+            padding: 16px 12px;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+            box-shadow: 
+                0 4px 8px rgba(30, 64, 175, 0.3),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .pool-log-table th:first-child {
+            border-radius: 12px 0 0 12px;
+        }
+        
+        .pool-log-table th:last-child {
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .pool-log-table td {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            color: #1f2937;
+            padding: 14px 10px;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            box-shadow: 
+                0 2px 8px rgba(0,0,0,0.08),
+                0 1px 3px rgba(0,0,0,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pool-log-table tr td:first-child {
+            border-radius: 12px 0 0 12px;
+            font-weight: 700;
+            background: linear-gradient(145deg, #dbeafe, #bfdbfe);
+            color: #1e40af;
+        }
+        
+        .pool-log-table tr td:last-child {
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .pool-log-table tbody tr:hover td {
+            background: linear-gradient(145deg, #fef3c7, #fde68a);
+            box-shadow: 
+                0 8px 25px rgba(0,0,0,0.15),
+                0 3px 10px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+            color: #92400e;
+        }
+        
+        .pool-log-table tbody tr:hover td:first-child {
+            background: linear-gradient(145deg, #fbbf24, #f59e0b);
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .pool-log-table .highlight-red {
+            background: linear-gradient(145deg, #fee2e2, #fecaca) !important;
+            color: #dc2626 !important;
+            font-weight: 700;
+            box-shadow: 
+                0 4px 12px rgba(220, 38, 38, 0.2),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+        
+        .pool-log-table .highlight-green {
+            background: linear-gradient(145deg, #dcfce7, #bbf7d0) !important;
+            color: #16a34a !important;
+            font-weight: 700;
+        }
+        
+        /* Loading animation effect */
+        .pool-log-table tbody tr {
+            animation: slideInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .pool-log-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+        .pool-log-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+        .pool-log-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+        .pool-log-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+        .pool-log-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+      /* Make the shadowbox/header responsive */
+.shadowbox, .header {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 800px) {
+  .shadowbox, .header {
+    padding: 10px 2vw;
+    font-size: 1.1em;
+    min-width: 0;
+  }
+  .shadowbox h1, .header h1 {
+    font-size: 1.3em;
+    text-align: center;
+    word-break: break-word;
+  }
+  /* If you have a button row, make it stack or scroll */
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .button-row button, .button-row a {
+    flex: 1 1 100px;
+    min-width: 80px;
+    margin: 4px 0;
+  }
+}
     </style>
-    <!-- Last updated: 2025-07-24T21:45:00.000Z -->
+    <!-- Last updated: 2025-07-24T18:43:09.014Z -->
+    <!-- Last updated: 2025-07-24T18:44:15.220Z -->
+    <!-- Last updated: 2025-07-24T19:13:25.074Z -->
 </head>
 <body>
     <div class="container">
@@ -411,44 +420,44 @@
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/pool_avatar.png" alt="Pool" />
                     <div class="title">Surrey Ridge Community Pool</div>
                 </a>
-
+                
                 <!-- Box 2: June 16th Board Meeting Videos -->
                 <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqUiTt0aQ8oAEHD631fG_tQ7" target="_blank" class="nav-box">
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/board_meeting_avatar.png" alt="Board Meeting" />
                     <div class="title">June 16th Board Meeting Videos</div>
                 </a>
-
+                
                 <!-- Box 3: Video Documentation -->
                 <a href="https://www.youtube.com/@AccessSurreyRidge" target="_blank" class="nav-box">
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/video_documentation_avatar.png" alt="Video Documentation" />
                     <div class="title">Video Documentation</div>
                 </a>
-
+                
                 <!-- Box 4: Center Box (Return to Index) -->
                 <a href="index.html" class="nav-box center-box">
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/SurreyLogo.jpg" alt="Surrey Ridge Logo" />
                     <div class="title">Home</div>
                 </a>
-
+                
                 <!-- Box 5: Morgan Property Solutions Failures -->
                 <a href="https://youtu.be/G6wXnb2A9Is?si=_OUaEw4zAlvgV9QT" target="_blank" class="nav-box"> 
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/morgan_property_avatar_dark.png" alt="Morgan Property" />
                     <div class="title">Morgan Property Solutions Failures</div>
                 </a>
-
+                
                 <!-- Box 6: Evidence of Illegitimate Board Formation -->
                 <a href="https://youtu.be/NvWqn7eYGQo" target="_blank" class="nav-box"> 
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/evidence_avatar_dark.png" alt="Evidence" />
                     <div class="title">Evidence of Illegitimate Board Formation</div>
                 </a>
-
+                
                 <!-- Box 7: Gaslighting and Lies to Homeowners -->
                 <a href="https://youtu.be/LFr1Rk1Nf5o" target="_blank" class="nav-box">  
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/gaslighting_avatar.png" alt="Gaslighting" />
                     <div class="title">Gaslighting and Lies to Homeowners</div>
                 </a>
             </div>
-
+            
             <h1>Surrey Ridge Community Pool</h1>
             <p style="text-align: center; font-size: 1.2em;">Comprehensive documentation of pool maintenance, issues, and Scott Davis's efforts to keep amenities open for homeowners</p>
         </div>
@@ -473,7 +482,7 @@
                 </ul>
                 <p>The repair saved thousands in HOA funds and avoided a dues increase. All work was done transparently and lawfully under homeowner proxy authority.</p>
                 <p><strong>Update:</strong> After the satisfactory inspection, President Janelle Marazon attempted to interfere with the Department of Health report by submitting photos and making false claims about unlicensed work that were proven false. DOH officials Alan Dang and Andrew Halula rejected these claims and confirmed the pool remains open and compliant despite her attempts to sabotage and hurt the homeowners.</p>
-
+                
                 <h3><strong>Watch the Department of Health Inspection:</strong></h3>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/R3HV7O0Uo9s" title="DOH Inspection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -484,13 +493,13 @@
             <!-- Surrey Ridge Community Pool Videos Section -->
             <section class="highlight-section">
                 <h2>Surrey Ridge Community Pool Videos</h2>
-
+                
                 <h3><strong>Watch the Latest Pool Maintenance and Operations:</strong></h3>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/fRwMA2TyOVw" title="Surrey Ridge Pool Latest Update" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <p>(If the video embed doesn't work, <a href="https://youtu.be/fRwMA2TyOVw" target="_blank">click here to watch on YouTube</a>)</p>
-
+                
                 <h3><strong>Watch the July 4th 2025 Servicing of the Community pool by VP and CPO Scott Davis:</strong></h3>
                 <div class="video-container">
                     <iframe src="https://youtube.com/embed/j5FXR-YgxCc" title="Surrey Ridge July 4th CPO Service - Scott Davis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -502,103 +511,100 @@
             <section class="highlight-section">
                 <h2>Pool Chemistry Trends Health and Safety Dashboard</h2>
                 <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">Comprehensive overview of pool chemical balance, trends, and safety metrics</p>
-
+                
                 <div style="text-align: center; margin: 20px 0;">
                     <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/surrey_ridge_pool_dashboard.png" 
                          alt="Surrey Ridge Pool Chemistry Dashboard" 
                          style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2);" />
                 </div>
-
+                
                 <p style="text-align: center; margin-top: 25px; font-style: italic; opacity: 0.8; font-size: 0.95em;">
                     Real-time monitoring and analysis of pool chemistry for optimal safety and compliance
                 </p>
             </section>
+          
+<section class="highlight-section">
+  <h2>CPO Costs and Reimbursements</h2>
+  <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">
+    Comprehensive CPO costs, out of pocket expenses and lag time for reimbursement
+  </p>
 
-            <!-- CPO Costs and Reimbursements Section -->
-            <section class="highlight-section">
-                <h2>CPO Costs and Reimbursements</h2>
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">
-                    Comprehensive CPO costs, out of pocket expenses and lag time for reimbursement
-                </p>
+  <div id="cpo-reimbursements-table"></div>
 
-                <div id="cpo-reimbursements-table"></div>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv";
 
-                <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-                <script>
-                    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv";
+    fetch(csvUrl)
+      .then(response => response.text())
+      .then(csvText => {
+        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+        let data = parsed.data;
+        data = data.reverse();
 
-                    fetch(csvUrl)
-                    .then(response => response.text())
-                    .then(csvText => {
-                        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
-                        let data = parsed.data;
-                        data = data.reverse();
+        const headers = Object.keys(data[0]).map(h => h.trim().toLowerCase());
+        const typeIdx = headers.indexOf("type");
+        const lagIdx = headers.findIndex(h => h.includes("lagtime"));
 
-                        const headers = Object.keys(data[0]).map(h => h.trim().toLowerCase());
-                        const typeIdx = headers.indexOf("type");
-                        const lagIdx = headers.findIndex(h => h.includes("lagtime"));
+        let html = '<table class="pool-log-table"><thead><tr>';
+        Object.keys(data[0]).forEach(header => {
+          html += `<th>${header}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+        data.forEach(row => {
+          let rowClass = "";
+          let rowStyle = "";
+          const type = row[Object.keys(row)[typeIdx]] ? row[Object.keys(row)[typeIdx]].toLowerCase() : "";
+          const lagRaw = row[Object.keys(row)[lagIdx]];
+          const lag = parseInt(lagRaw);
 
-                        let html = '<div class="pool-log-container"><div class="pool-log-wrapper"><table class="pool-log-table"><thead><tr>';
-                        Object.keys(data[0]).forEach(header => {
-                            html += `<th>${header}</th>`;
-                        });
-                        html += '</tr></thead><tbody>';
-
-                        data.forEach(row => {
-                            let rowClass = "";
-                            let rowStyle = "";
-                            const type = row[Object.keys(row)[typeIdx]] ? row[Object.keys(row)[typeIdx]].toLowerCase() : "";
-                            const lagRaw = row[Object.keys(row)[lagIdx]];
-                            const lag = parseInt(lagRaw);
-
-                            if (type.includes("reimbursement")) {
-                                rowClass = "reimbursement-row";
-                                rowStyle = 'style="background: linear-gradient(145deg, #e5f0ff, #cce7ff) !important; color: #1e40af !important;"';
-                            } else if (!isNaN(lag)) {
-                                if (lag > 4) {
-                                    rowClass = "lag-red";
-                                    rowStyle = 'style="background: linear-gradient(145deg, #fee2e2, #fecaca) !important; color: #dc2626 !important; font-weight: 700;"';
-                                } else {
-                                    rowClass = "lag-green";
-                                    rowStyle = 'style="background: linear-gradient(145deg, #dcfce7, #bbf7d0) !important; color: #16a34a !important; font-weight: 700;"';
-                                }
-                            }
-
-                            html += `<tr class="cpo-highlight ${rowClass}" ${rowStyle}>`;
-                            Object.values(row).forEach(cell => {
-                                html += `<td>${cell || ""}</td>`;
-                            });
-                            html += '</tr>';
-                        });
-
-                        html += '</tbody></table></div></div>';
-                        document.getElementById('cpo-reimbursements-table').innerHTML = html;
-                    })
-                    .catch(error => {
-                        document.getElementById('cpo-reimbursements-table').innerHTML = '<div class="pool-log-container"><div class="pool-log-wrapper"><p style="text-align: center; color: #dc2626;">Failed to load CPO reimbursement data. Please try refreshing the page.</p></div></div>';
-                        console.error('Error loading CPO data:', error);
-                    });
-                </script>
-            </section>
+          if (type.includes("reimbursement")) {
+            rowClass = "reimbursement-row";
+            rowStyle = 'background-color: #e5f0ff;';
+          } else if (!isNaN(lag)) {
+            if (lag > 4) {
+              rowClass = "lag-red";
+              rowStyle = 'background-color: #ffe5e5;';
+            } else {
+              rowClass = "lag-green";
+              rowStyle = 'background-color: #e6ffe5;';
+            }
+          }
+          html += `<tr class="cpo-highlight ${rowClass}" style="${rowStyle}">`;
+          Object.values(row).forEach(cell => {
+            html += `<td>${cell || ""}</td>`;
+          });
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+        document.getElementById('cpo-reimbursements-table').innerHTML = html;
+      })
+      .catch(error => {
+        document.getElementById('cpo-reimbursements-table').innerHTML = "Failed to load data.";
+        console.error(error);
+      });
+    
+  </script>
+</section>
 
             <!-- Scott Davis Pool Maintenance Section -->
             <section class="highlight-section">
                 <h2>Scott Davis - Pool Maintenance & Reimbursement Issues</h2>
                 <p><strong>Scott Davis is the only reason the pool has re-opened and remained open. Fighting off intentional sabotage, former directors removing hoses from the pool and intimidating neighbors into disallowing water usage all to politicize and damage homeowners.</strong> Scott has taken decisive and necessary steps to preserve HOA assets, protect homeowner amenities, and ensure safety and security of residents - all at his own personal expense. Meanwhile directors Subject to recall, have abused their authority, logging into security cameras, eavesdropping on his conversations, intimidating residents, ejecting homeowners from the common area and pool, taking unauthorized photos and videos of Mr. Davis while working in the common area and attempting to forward them to the Dept of Health, making claims of wrongdoing, which were immediately shut down by the Dept of Health inspectors at every level. Mr. Davis has a excellent relationship and rapport with the Dept of Health, has the same CPO certification that the inspectors have and works closely with them in concert to ensure the safety and well-being of the residence while remaining in compliance and above board.</p>
-
+                
                 <h3>Ongoing Financial Hardships Created by Recalled Directors</h3>
                 <p>The directors subject to recall and the management company have worked together to create financial hardships for the proxy holder and homeowner representative. Time and time again, Mr. Davis has fronted money at his own expense for pool chemicals and maintenance to ensure amenities remain open for homeowners and their children. He has come out of pocket with emergency repairs using a vetted and licensed CFC plumber to repair a water pipe damaged by a bad vendor propped up by recalled directors and a bad management company that has been served multiple curative notices for poor performance. The same management company that gaslit the community, closed the pool without authority or board vote, lied to homeowners about a fake leak in the pool that did not exist to try to cover up for a illegal chlorine levels that violated Dept of Health standards. When I tried to tell the community about what was happening? They retaliated and tried to destroy me. On March 10, 2025 and an open notice board meeting Janelle Marazon skipped over most of the agenda items so she could spend most of our time trying to enact in illegal censorship policy preventing Mr. Davis from contacting 911, 811, the Dept of Health or any other governing agency prior to getting approval from her and the board so she could control all narratives like she has attempted to do since 2021, eight months before we had legal authority to operate as an association. Once she got recalled directors to vote on this censorship policy in order to manufacture due cause and create the recipe to manufacture cause for removal of a director, within a week the entire board was served with certified letters, formally objecting to this illegal policy of censorship that would prevent me from whistleblowing and preventing injury to homeowners and their children. Not another word has ever been spoken about this illegal policy since those certified letters were served, but since then they have attempted to remove me from the board on April 14 a retaliatory and illegal act and failed because homeowners were finally paying attention to the wrongdoings.</p>
-
+                
                 <h3>Broken Promises of Reimbursement</h3>
                 <p>Despite repeated promises of reimbursement from recalled Director Janelle Marazon at open noticed board meetings, including the June 16, 2025 meeting where she promised and assured all homeowners that if Mr. Davis came out of pocket to continue supporting the pool, she would immediately reimburse him - <strong>no such reimbursement has been issued since this meeting as it was all for show. They wanted the appearance that they were not withholding funds and creating financial harm to another director because it was not a good look while under DBPR review. So they did the bare minimum, slow paid nearly 90 day old out of pocket expenses only to ignore the current reimbursement requests, the opposite of what was promised on recorded June 16th board meeting minutes.</strong></p>
-
+                
                 <p>On June 27, 2025, Scott Davis submitted a reimbursement request for pool chemicals and everything that was previously approved at the June 16 open meeting, with board resolution votes confirming the motion passed. Despite this formal agreement, no reimbursement has been provided per the board's own resolution while Oliver Morgan has paid himself, sent funds to Sarah Webner for nearly $6,000.00 and shafted the director who works for free and finances the association operations out of his own pockets without reimbursement.</p>
-
+                
                 <h3>Darwin Johnson's False Statement</h3>
                 <p>At the written recall rejection meeting, Darwin Johnson read a prepared statement that had been written for him, claiming that <strong>"the board had not withheld reimbursement payments to director Davis."</strong> This statement is <strong>100% false and provably so.</strong></p>
-
+                
                 <p>Mr. Davis has the receipts and documentation proving that reimbursements have been withheld despite board resolutions and promises to swiftly take care of them. The reason Scott Davis has not and can not be sued for his statements is because everything he has stated can be proven TRUE with documentation that most homeowners have already seen. Nobody is falling for their hail mary gaslighting because nobody is buying the little boy cried wolf act anymore. Mr. Davis has worked in common areas for months streaming 4k gopro footage to prevent false allegations by bad directors and management company that they have attempted time and time again to no avail. The TRUTH SHALL SET YOU FREE.</p>
-
+                
                 <h3>The evidence is clear:</h3> 
                 <p>The recalled directors have systematically withheld reimbursements, created censorship policies and harassed Mr. Davis while forcing him to personally fund essential pool maintenance to keep amenities open for the community, meanwhile reimbursing themselves instantly, funding attorneys with homeowner money and even paying vendors that have not shown up to work in 28 days straight!. Mr. Davis is willing to endure the hardships because he knows there are good replacement directors ready to come on board and do what is best for the community.</p>
             </section>
@@ -606,10 +612,10 @@
             <!-- Pool Sabotage and Vendor Issues Section -->
             <section class="highlight-section">
                 <h2>Pool Sabotage and Vendor Issues</h2>
-
+                
                 <h3>AlwaysClear Pool Vendor Terminated</h3>
                 <p>The AlwaysClear pool vendor was terminated due to repeated failures, safety violations, and unprofessional conduct that endangered homeowners and violated Department of Health standards.</p>
-
+                
                 <h3>Key Issues with AlwaysClear:</h3>
                 <ul>
                     <li><strong>Illegal Chlorine Levels:</strong> Allowed free chlorine levels above 10 ppm multiple times, violating DOH safety standards</li>
@@ -619,7 +625,7 @@
                     <li><strong>Poor Communication:</strong> Failed to respond to CPO instructions and safety concerns and requested he be coddled by other board members subject to recall that were propping him up and keeping him from termination.</li>
                     <li><strong>Attendance Issues:</strong> Failed to show up for scheduled regular maintenance, had non CPO working under him, failed to train staff properly and was missing reagent R-0001 in his chlorine testing kit for employee.</li>
                 </ul>
-
+                
                 <h3>Oliver Morgan and Management Company Gaslighting</h3>
                 <p>Oliver Morgan of Morgan Property Solutions and the management company engaged in systematic gaslighting of the community regarding pool issues:</p>
                 <ul>
@@ -629,10 +635,10 @@
                     <li><strong>Retaliation:</strong> Attempted to prevent Scott Davis from contacting DOH and other authorities via various methods not limited to taking votes on an illegal censorship policy designed to prevent Dept of Health contact when violations occurred without first getting approval.</li>
                     <li><strong>Financial Mismanagement:</strong> Paid vendors who weren't performing while withholding reimbursements from Scott Davis</li>
                 </ul>
-
+                
                 <h3>Pool Sabotage Videos</h3>
                 <p>Watch documented evidence of pool sabotage and vendor failures:</p>
-
+                
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/dx9K9Y-hPYE" title="Surrey Ridge Pool Sabotage Documentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -642,10 +648,10 @@
             <!-- CPO Certification and Professional Standards Section -->
             <section class="highlight-section">
                 <h2>CPO Certification and Professional Standards</h2>
-
+                
                 <h3>Scott Davis - Certified Pool Operator (CPO)</h3>
                 <p>Scott Davis holds the same Certified Pool Operator (CPO) certification as Department of Health inspectors, ensuring professional-level pool maintenance and safety standards.</p>
-
+                
                 <h3>CPO Responsibilities and Standards:</h3>
                 <ul>
                     <li><strong>Water Chemistry Management:</strong> Maintaining proper pH, chlorine, and alkalinity levels</li>
@@ -655,7 +661,7 @@
                     <li><strong>Emergency Response:</strong> Immediate action on safety concerns and equipment failures</li>
                     <li><strong>Regulatory Liaison:</strong> Direct communication with DOH inspectors and officials</li>
                 </ul>
-
+                
                 <h3>Professional Relationship with Department of Health</h3>
                 <p>Scott Davis has established an excellent working relationship with DOH officials, including:</p>
                 <ul>
@@ -664,7 +670,7 @@
                     <li><strong>Person in Charge Designation:</strong> DOH specifically designated Scott Davis as the responsible party on the association's health permit</li>
                     <li><strong>Trusted Contact:</strong> DOH prefers to work directly with Scott Davis due to his professionalism and expertise</li>
                 </ul>
-
+                
                 <h3>Contrast with Previous Vendor Performance</h3>
                 <p>The difference between CPO-managed pool maintenance and vendor neglect is stark:</p>
                 <ul>
@@ -791,7 +797,7 @@
     }
     
     /* Responsive design */
-    @media (max-width: 1900px) {
+    @media (max-width: 768px) {
       .pool-log-wrapper {
         padding: 15px;
       }
@@ -2740,4 +2746,3 @@
     </div>
 </body>
 </html>
-
