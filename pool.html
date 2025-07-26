@@ -209,6 +209,13 @@
       color:#fff;
       text-shadow:1px 1px 2px rgba(0,0,0,.3)
     }
+    /* Center every section header */
+h2{
+  text-align:center !important;
+}
+    h3{
+  text-align:center !important;
+}
  /* ---------- MOBILE FONT-SCALE FIX ---------- */
 @media (max-width: 768px) {
   /* Global resets */
@@ -224,6 +231,33 @@
   /* Nav-box labels */
   .nav-box .title{font-size:7px !important}
   .nav-box.center-box .title{font-size:8px !important}
+  
+  /* ---------- MOBILE ONLY ≤ 768 px ---------- */
+@media (max-width: 768px) {
+
+  /* 1. SHRINK IFRAMES (three-across, single, etc.) */
+  .video-container iframe,
+  .highlight-section iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+  }
+
+  /* 2. POOL-LOG & CPO-REIMBURSEMENT TABLES */
+  .pool-log-table,
+  .pool-log-table th,
+  .pool-log-table td {
+    font-size: 10px !important;
+    line-height: 1.1;
+    padding: 4px 2px !important;
+  }
+
+  /* Optional – allow horizontal scroll instead of tiny text if you prefer */
+  .pool-log-wrapper {
+    overflow-x: auto;
+  }
+}
 
   /* Tables */
   .pool-log-table th,
