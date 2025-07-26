@@ -619,16 +619,25 @@ h2{
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <script>
-    /* Pool Maintenance Log */
-    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRXPr3nZD5-IFQftlDElWCg2whZaqyrqUBZ3VmEslmtaZZBsN-1hnnKC4liojx_CufrqmUqXp06NsoJ/pub?output=csv")
-      .then(r=>r.text()).then(c=>{
-        const d=Papa.parse(c,{header:true,skipEmptyLines:true}).data.reverse();
-        document.getElementById('pool-log-tbody').innerHTML=d.map(r=>`<tr>${Object.values(r).map(c=>`<td>${c||''}</td>`).join('')}</tr>`).join('');
-      });
+<script>
+/* Pool-Log – skip 7 lines, start 05/04/2025+ */
+(async () => {
+  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRXPr3nZD5-IFQftlDElWCg2whZaqyrqUBZ3VmEslmtaZZBsN-1hnnKC4liojx_CufrqmUqXp06NsoJ/pub?output=csv";
+  const resp = await fetch(url);
+  const csv  = await resp.text();
+
+  const rows = Papa.parse(csv, { header: true, skipEmptyLines: true })
+                   .data
+                   .slice(6)                               // skip header + 6 junk
+                   .reverse();                             // newest on top
+
+  document.getElementById('pool-log-tbody').innerHTML =
+    rows.map(r => `<tr>${Object.values(r).map(v => `<td>${v || ''}</td>`).join('')}</tr>`).join('');
+})();
+</script>
 
     /* CPO Reimbursements */
-    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv")
+   <script> fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv")
       .then(r=>r.text()).then(c=>{
         const d=Papa.parse(c,{header:true,skipEmptyLines:true}).data.reverse();
         document.getElementById('cpo-reimbursements-tbody').innerHTML=d.map(r=>`<tr>${Object.values(r).map(c=>`<td>${c||''}</td>`).join('')}</tr>`).join('');
