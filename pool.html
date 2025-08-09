@@ -8,206 +8,206 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ---- GLOBAL ---- */
+    /* ---------- GLOBAL ---------- */
     body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
-    background:#1e1e1e;
-    color:#e0e0e0;
-    margin:0;
-    padding:20px;
-    line-height:1.6
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
+      background:#1e1e1e;
+      color:#e0e0e0;
+      margin:0;
+      padding:20px;
+      line-height:1.6
     }
     .container{
-    width:100%;
-    max-width:1900px;
-    margin:0 auto;
-    padding:30px;
-    background:#2c2c2c;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.6);
-    box-sizing:border-box
+      width:100%;
+      max-width:1900px;
+      margin:0 auto;
+      padding:30px;
+      background:#2c2c2c;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,.6);
+      box-sizing:border-box
     }
     .header{text-align:center;margin-bottom:40px}
 
-    /* ---- NAVIGATION ---- */
+    /* ---------- NAVIGATION ---------- */
     .nav-container{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin:30px 0;
-    overflow-x:auto;
-    padding:0 0 10px;
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      margin:30px 0;
+      overflow-x:auto;
+      padding:0 0 10px;
     }
     .nav-box{
-    flex:0 0 120px;
-    height:120px;
-    background:#333;
-    border-radius:12px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:#e0e0e0;
-    text-decoration:none;
-    padding:4px 6px;
-    box-sizing:border-box;
-    transition:all .3s ease;
-    text-align:center;
-    border:2px solid transparent
+      flex:0 0 120px;
+      height:120px;
+      background:#333;
+      border-radius:12px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      color:#e0e0e0;
+      text-decoration:none;
+      padding:4px 6px;
+      box-sizing:border-box;
+      transition:all .3s ease;
+      text-align:center;
+      border:2px solid transparent
     }
     .nav-box:hover{
-    background:#4a4a4a;
-    transform:translateY(-3px);
-    border-color:#4a90e2
+      background:#4a4a4a;
+      transform:translateY(-3px);
+      border-color:#4a90e2
     }
     .nav-box img{
-    width:65px;
-    height:65px;
-    object-fit:cover;
-    border-radius:6px;
-    margin-bottom:4px
+      width:65px;
+      height:65px;
+      object-fit:cover;
+      border-radius:6px;
+      margin-bottom:4px
     }
     .nav-box .title{
-    font-size:8.5px;
-    font-weight:700;
-    line-height:1.05;
-    text-transform:uppercase;
-    letter-spacing:-.2px;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-    word-break:break-word
+      font-size:8.5px;
+      font-weight:700;
+      line-height:1.05;
+      text-transform:uppercase;
+      letter-spacing:-.2px;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+      word-break:break-word
     }
     .nav-box.center-box{
-    flex:0 0 140px;
-    height:140px
+      flex:0 0 140px;
+      height:140px
     }
     .nav-box.center-box img{
-    width:70px;
-    height:70px
+      width:70px;
+      height:70px
     }
     .nav-box.center-box .title{
-    font-size:9.5px
+      font-size:9.5px
     }
     .nav-box.current-page{
-    background:linear-gradient(145deg,#4a90e2,#357ab8);
-    border-color:#4a90e2
+      background:linear-gradient(145deg,#4a90e2,#357ab8);
+      border-color:#4a90e2
     }
   /* GLOBAL OVERRIDE – applies to ALL section boxes */
     .highlight-section,
     .section{
-    background:linear-gradient(135deg,#1e3a8a 10%,#0000 100%) !important;
-    color:#fff;
-    border-radius:16px;
-    box-shadow:0 8px 32px rgba(0,0,0,.3);
-    padding:40px;
-    margin:40px 0;
+      background:linear-gradient(135deg,#1e3a8a 10%,#000000 100%) !important;
+      color:#fff;
+      border-radius:16px;
+      box-shadow:0 8px 32px rgba(0,0,0,.3);
+      padding:40px;
+      margin:40px 0;
     }
 
-    /* ---- SECTIONS & TABLES ---- */
+    /* ---------- SECTIONS & TABLES ---------- */
     h1,h2{color:#fff;font-weight:600;letter-spacing:-.025em}
     h1{font-size:2.5rem;font-weight:700;margin-bottom:1rem}
     h2{font-size:1.875rem;margin-bottom:1.5rem;text-align:center}
     p{font-size:1.125rem;margin-bottom:1.5rem;color:#d0d0d0}
     .highlight-section{
-    background:linear-gradient(135deg,#1e3a8a 0%,#1e40af 100%);
-    color:#fff;
-    padding:40px;
-    margin:40px 0;
-    border-radius:16px;
-    box-shadow:0 12px 32px rgba(0,0,0,.5);
-    border:1px solid #2563eb
+      background:linear-gradient(135deg,#1e3a8a 0%,#1e40af 100%);
+      color:#fff;
+      padding:40px;
+      margin:40px 0;
+      border-radius:16px;
+      box-shadow:0 12px 32px rgba(0,0,0,.5);
+      border:1px solid #2563eb
     }
     .video-container{
-    position:relative;
-    width:100%;
-    height:0;
-    padding-bottom:56.25%;
-    margin:24px 0;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 8px 24px rgba(0,0,0,.4)
+      position:relative;
+      width:100%;
+      height:0;
+      padding-bottom:56.25%;
+      margin:24px 0;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.4)
     }
     .video-container iframe{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    border:none
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      border:none
     }
-    /* ---- MOBILE FONT-SIZE FIX ---- */
+    /* ---------- MOBILE FONT-SIZE FIX ---------- */
     @media (max-width: 768px) {
-    .highlight-section h1 {
-    font-size: 1.6rem;   /* ≈25 px */
-    }
-    .highlight-section h2 {
-    font-size: 1.35rem;  /* ≈22 px */
-    line-height: 1.25;
-    }
+      .highlight-section h1 {
+        font-size: 1.6rem;   /* ≈25 px */
+      }
+      .highlight-section h2 {
+        font-size: 1.35rem;  /* ≈22 px */
+        line-height: 1.25;
+      }
     }
 
-    /* ---- POOL LOG / CPO COSTS ---- */
+    /* ---------- POOL LOG / CPO COSTS ---------- */
     .pool-log-container{
-    background:linear-gradient(145deg,#f8fafc,#e2e8f0);
-    border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.6);
-    overflow:hidden;
-    margin:0 auto;
-    border:1px solid rgba(255,255,255,.2)
+      background:linear-gradient(145deg,#f8fafc,#e2e8f0);
+      border-radius:20px;
+      box-shadow:0 20px 40px rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.6);
+      overflow:hidden;
+      margin:0 auto;
+      border:1px solid rgba(255,255,255,.2)
     }
     .pool-log-wrapper{overflow-x:auto;padding:20px}
     .pool-log-table{
-    width:100%;
-    border-collapse:separate;
-    border-spacing:0 8px;
-    min-width:800px;
-    font-size:.75em
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0 8px;
+      min-width:800px;
+      font-size:.75em
     }
     .pool-log-table th{
-    background:linear-gradient(145deg,#1e40af,#3b82f6);
-    color:#fff;
-    font-weight:700;
-    text-transform:uppercase;
-    font-size:.7em;
-    letter-spacing:.5px;
-    padding:16px 12px;
-    text-align:center;
-    vertical-align:middle;
-    box-shadow:0 4px 8px rgba(30,64,175,.3),inset 0 1px 0 rgba(255,255,255,.2);
-    text-shadow:1px 1px 2px rgba(0,0,0,.3)
+      background:linear-gradient(145deg,#1e40af,#3b82f6);
+      color:#fff;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:.7em;
+      letter-spacing:.5px;
+      padding:16px 12px;
+      text-align:center;
+      vertical-align:middle;
+      box-shadow:0 4px 8px rgba(30,64,175,.3),inset 0 1px 0 rgba(255,255,255,.2);
+      text-shadow:1px 1px 2px rgba(0,0,0,.3)
     }
     .pool-log-table th:first-child{border-radius:12px 0 0 12px}
     .pool-log-table th:last-child{border-radius:0 12px 12px 0}
     .pool-log-table td{
-    background:linear-gradient(145deg,#fff,#f8fafc);
-    color:#1f2937;
-    padding:14px 10px;
-    text-align:center;
-    vertical-align:middle;
-    border:none;
-    font-weight:500;
-    box-shadow:0 2px 8px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.8);
-    transition:all .3s cubic-bezier(.4,0,.2,1)
+      background:linear-gradient(145deg,#fff,#f8fafc);
+      color:#1f2937;
+      padding:14px 10px;
+      text-align:center;
+      vertical-align:middle;
+      border:none;
+      font-weight:500;
+      box-shadow:0 2px 8px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.8);
+      transition:all .3s cubic-bezier(.4,0,.2,1)
     }
     .pool-log-table tr td:first-child{
-    border-radius:12px 0 0 12px;
-    font-weight:700;
-    background:linear-gradient(145deg,#dbeafe,#bfdbfe);
-    color:#1e40af
+      border-radius:12px 0 0 12px;
+      font-weight:700;
+      background:linear-gradient(145deg,#dbeafe,#bfdbfe);
+      color:#1e40af
     }
     .pool-log-table tr td:last-child{border-radius:0 12px 12px 0}
     .pool-log-table tbody tr:hover td{
-    background:linear-gradient(145deg,#fef3c7,#fde68a);
-    box-shadow:0 8px 25px rgba(0,0,0,.15),0 3px 10px rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.9);
-    transform:translateY(-2px);
-    color:#92400e
+      background:linear-gradient(145deg,#fef3c7,#fde68a);
+      box-shadow:0 8px 25px rgba(0,0,0,.15),0 3px 10px rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.9);
+      transform:translateY(-2px);
+      color:#92400e
     }
     .pool-log-table tbody tr:hover td:first-child{
-    background:linear-gradient(145deg,#fbbf24,#f59e0b);
-    color:#fff;
-    text-shadow:1px 1px 2px rgba(0,0,0,.3)
+      background:linear-gradient(145deg,#fbbf24,#f59e0b);
+      color:#fff;
+      text-shadow:1px 1px 2px rgba(0,0,0,.3)
     }
     /* Center every section header */
 h2{
@@ -216,7 +216,7 @@ h2{
     h3{
   text-align:center !important;
 }
- /* ---- MOBILE FONT-SCALE FIX ---- */
+ /* ---------- MOBILE FONT-SCALE FIX ---------- */
 @media (max-width: 768px) {
   /* Global resets */
   body{font-size:14px;line-height:1.45}
@@ -238,7 +238,7 @@ h2{
   }
 }
   
-  /* ---- MOBILE ONLY ≤ 768 px ---- */
+  /* ---------- MOBILE ONLY ≤ 768 px ---------- */
 @media (max-width: 768px) {
 
   /* 1. SHRINK IFRAMES (three-across, single, etc.) */
@@ -290,542 +290,361 @@ h2{
   <div class="container">
     <!-- HEADER & NAVIGATION -->
     <div class="header">
-    <div class="nav-container">
-    <a href="pool.html" class="nav-box current-page">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/pool_avatar.png" alt="Pool"/>
-    <span class="title">Surrey Ridge<br>Community Pool</span>
-    </a>
-    <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqUiTt0aQ8oAEHD631fG_tQ7" target="_blank" class="nav-box">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/board_meeting_avatar.png" alt="Board"/>
-    <span class="title">June 16th<br>Board Meeting</span>
-    </a>
-    <a href="https://www.youtube.com/@AccessSurreyRidge" target="_blank" class="nav-box">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/video_documentation_avatar.png" alt="Video"/>
-    <span class="title">Video<br>Documentation</span>
-    </a>
-    <a href="index.html" class="nav-box center-box">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/SurreyLogo.jpg" alt="Logo"/>
-    <span class="title">Home</span>
-    </a>
-    <a href="https://youtu.be/G6wXnb2A9Is?si=_OUaEw4zAlvgV9QT" target="_blank" class="nav-box">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/morgan_property_avatar_dark.png" alt="Morgan"/>
-    <span class="title">Morgan Property<br>Failures</span>
-    </a>
-    <a href="https://youtu.be/NvWqn7eYGQo" target="_blank" class="nav-box">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/evidence_avatar_dark.png" alt="Evidence"/>
-    <span class="title">Illegitimate<br>Board Evidence</span>
-    </a>
-    <a href="https://youtu.be/LFr1Rk1Nf5o" target="_blank" class="nav-box">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/gaslighting_avatar.png" alt="Gaslighting"/>
-    <span class="title">Gaslighting &<br>Lies</span>
-    </a>
-    </div>
-
-    <h1>Surrey Ridge Community Pool</h1>
-    <p style="font-size:1.125rem;color:#b0b0b0;margin-bottom:2rem;">
-    Comprehensive documentation of pool maintenance, issues, and Scott Davis's efforts to keep amenities open for homeowners
-    <!-- WEATHER + LIGHTNING WIDGET (under title/description) -->
-    <section class="highlight-section" id="weather-section" style="background:linear-gradient(135deg,#0f172a 0%, #1e3a8a 100%);">
-      <h2 style="margin-top:0">Pool Weather, Forecast & Lightning</h2>
-      <p style="text-align:center;margin:-6px 0 18px;color:#cbd5e1">Live local conditions, NWS alerts and a lightning proximity indicator for pool safety.</p>
-
-      <div style="display:grid;gap:16px;grid-template-columns:1.25fr .75fr;align-items:stretch">
-        <!-- Left: Current + Forecast + Alerts -->
-        <div class="section" style="padding:16px;background:rgba(15,23,42,.55);border:1px solid rgba(59,130,246,.35)">
-          <h3 style="margin:0 0 8px">Local Weather</h3>
-          <div style="color:#94a3b8;font-size:.95rem" id="wx-location">Locating…</div>
-
-          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:10px">
-            <div style="min-width:120px"><div style="font-size:34px;font-weight:700" id="wx-temp">—</div><div style="font-size:12px;color:#94a3b8">Temp</div></div>
-            <div style="min-width:120px"><div style="font-size:34px;font-weight:700" id="wx-feels">—</div><div style="font-size:12px;color:#94a3b8">Feels like</div></div>
-            <div style="min-width:120px"><div style="font-size:34px;font-weight:700" id="wx-wind">—</div><div style="font-size:12px;color:#94a3b8">Wind</div></div>
-            <div style="min-width:120px"><div style="font-size:34px;font-weight:700" id="wx-humid">—</div><div style="font-size:12px;color:#94a3b8">Humidity</div></div>
-          </div>
-
-          <div id="wx-forecast" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:14px 0 6px"></div>
-
-          <div>
-            <h4 style="margin:10px 0 6px">NWS Alerts</h4>
-            <div id="wx-alerts" style="font-size:.95rem;color:#e5e7eb">No active alerts.</div>
-          </div>
-
-          <div style="font-size:12px;color:#a1a1aa;margin-top:8px">Data: Open‑Meteo (current/forecast) & National Weather Service (alerts)</div>
-        </div>
-
-        <!-- Right: Lightning Map -->
-        <div class="section" style="padding:16px;background:rgba(15,23,42,.55);border:1px solid rgba(59,130,246,.35)">
-          <h3 style="margin:0 0 8px">Lightning Nearby (last 60 min)</h3>
-          <div style="color:#94a3b8;font-size:.9rem;margin-bottom:8px">From LightningMaps.org. Always clear the pool at first thunder.</div>
-          <div id="wx-lm-wrap" style="position:relative">
-            <iframe id="wx-lm" title="Lightning map" loading="lazy" style="width:100%;height:420px;border:0;border-radius:10px;outline:1px solid rgba(59,130,246,.3)" src=""></iframe>
-            <div id="wx-lm-fallback" style="display:none; width:100%; height:420px; border-radius:10px; outline:1px solid rgba(59,130,246,.3); background:rgba(15,23,42,.6); color:#cbd5e1; display:flex; align-items:center; justify-content:center; text-align:center; padding:14px; box-sizing:border-box;">
-              <div>
-                <div style="font-weight:700; font-size:1.05rem; margin-bottom:6px;">Live lightning map requires opening in a new tab</div>
-                <div style="font-size:.9rem; opacity:.9; margin-bottom:10px;">Some browsers (like Firefox) block embedding LightningMaps for security.</div>
-                <button id="wx-open-full-fallback" style="padding:10px 14px; border-radius:8px; border:1px solid rgba(59,130,246,.5); background:#1e3a8a; color:white; cursor:pointer;">Open Full Lightning Map</button>
-              </div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
-            <button id="wx-zoom-in">Zoom in</button>
-            <button id="wx-zoom-out">Zoom out</button>
-            <button id="wx-open-full">Open full map</button>
-          </div>
-        </div>
+      <div class="nav-container">
+        <a href="pool.html" class="nav-box current-page">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/pool_avatar.png" alt="Pool"/>
+          <span class="title">Surrey Ridge<br>Community Pool</span>
+        </a>
+        <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqUiTt0aQ8oAEHD631fG_tQ7" target="_blank" class="nav-box">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/board_meeting_avatar.png" alt="Board"/>
+          <span class="title">June 16th<br>Board Meeting</span>
+        </a>
+        <a href="https://www.youtube.com/@AccessSurreyRidge" target="_blank" class="nav-box">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/video_documentation_avatar.png" alt="Video"/>
+          <span class="title">Video<br>Documentation</span>
+        </a>
+        <a href="index.html" class="nav-box center-box">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/SurreyLogo.jpg" alt="Logo"/>
+          <span class="title">Home</span>
+        </a>
+        <a href="https://youtu.be/G6wXnb2A9Is?si=_OUaEw4zAlvgV9QT" target="_blank" class="nav-box">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/morgan_property_avatar_dark.png" alt="Morgan"/>
+          <span class="title">Morgan Property<br>Failures</span>
+        </a>
+        <a href="https://youtu.be/NvWqn7eYGQo" target="_blank" class="nav-box">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/evidence_avatar_dark.png" alt="Evidence"/>
+          <span class="title">Illegitimate<br>Board Evidence</span>
+        </a>
+        <a href="https://youtu.be/LFr1Rk1Nf5o" target="_blank" class="nav-box">
+          <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/gaslighting_avatar.png" alt="Gaslighting"/>
+          <span class="title">Gaslighting &<br>Lies</span>
+        </a>
       </div>
-    </section>
 
-    </p>
+      <h1>Surrey Ridge Community Pool</h1>
+      <p style="font-size:1.125rem;color:#b0b0b0;margin-bottom:2rem;">
+        Comprehensive documentation of pool maintenance, issues, and Scott Davis's efforts to keep amenities open for homeowners
+      </p>
     </div>
 
     <!-- POOL REOPENED SECTION -->
     <section class="highlight-section">
-    <h2>Pool Reopened, Legally and Safely on April 29<sup>th</sup>, 2025</h2>
-    <p>The pool has been legally reopened following a licensed CFC plumbing repair VP Scott Davis had to pay for out of pocket so that the pool could reopen, which was subsequently approved by the Florida Department of Health and issued a satisfactory health report. A report that Director subject to recall attempted to try and contact the Department of Health to intentionally fail for political purposes. Janelle Marazon emailed both the Department of Health and all homeowners within Surrey Ridge Community to make false claims that the licensed CFC repair was illegal and was done by VP Scott Davis. This was proven 100 % false, was very embarrassing for Janelle Marazon and caused the Department not to want to hear from her again. DOH intentionally made Scott Davis the "Person in Charge" on the Association's Health Department Permit so that he could remain the responsible and accountable liaison and trusted contact for the Department Inspectors.</p>
+      <h2>Pool Reopened, Legally and Safely on April 29<sup>th</sup>, 2025</h2>
+      <p>The pool has been legally reopened following a licensed CFC plumbing repair VP Scott Davis had to pay for out of pocket so that the pool could reopen, which was subsequently approved by the Florida Department of Health and issued a satisfactory health report. A report that Director subject to recall attempted to try and contact the Department of Health to intentionally fail for political purposes. Janelle Marazon emailed both the Department of Health and all homeowners within Surrey Ridge Community to make false claims that the licensed CFC repair was illegal and was done by VP Scott Davis. This was proven 100 % false, was very embarrassing for Janelle Marazon and caused the Department not to want to hear from her again. DOH intentionally made Scott Davis the "Person in Charge" on the Association's Health Department Permit so that he could remain the responsible and accountable liaison and trusted contact for the Department Inspectors.</p>
 
-    <ul>
-    <li><strong>Plumbing repaired by American Veteran Plumbing LLC</strong> – a licensed, DBPR-verified CFC contractor on 4/29/2025.</li>
-    <li><strong>Cost:</strong> $295 (vs. $750+ proposal to dig alone by the former vendor)</li>
-    <li><strong>No trenching, no rerouting, no inflated costs</strong> – saved homeowners $5,705.00</li>
-    <li><strong>DOH approved reopening</strong> after full documentation submitted</li>
-    <li><strong>Pool chemical levels verified:</strong> pH 7.4, Free Chlorine 7.5 ppm were brought down from the pool vendor's prior (0 ppm, 10.5-11.0ppm and 15ppm documented on video) levels that were outside of acceptable range by Department of Health standards.</li>
-    </ul>
+      <ul>
+        <li><strong>Plumbing repaired by American Veteran Plumbing LLC</strong> – a licensed, DBPR-verified CFC contractor on 4/29/2025.</li>
+        <li><strong>Cost:</strong> $295 (vs. $750+ proposal to dig alone by the former vendor)</li>
+        <li><strong>No trenching, no rerouting, no inflated costs</strong> – saved homeowners $5,705.00</li>
+        <li><strong>DOH approved reopening</strong> after full documentation submitted</li>
+        <li><strong>Pool chemical levels verified:</strong> pH 7.4, Free Chlorine 7.5 ppm were brought down from the pool vendor's prior (0 ppm, 10.5-11.0ppm and 15ppm documented on video) levels that were outside of acceptable range by Department of Health standards.</li>
+      </ul>
 
-    <p><strong>Water restored to:</strong></p>
-    <ul>
-    <li>Cabana restroom and shower</li>
-    <li>Pool shower and fill line</li>
-    <li>Irrigation (pending one remaining cut pipe which was donely by bad pool vendor and after Oliver Morgan hired an unlicensed plumber to work on irrigation potable water lines Jessie @ Bel-Air-X, a landscaper with no CFC license to work on potable water pipes.)</li>
-    </ul>
+      <p><strong>Water restored to:</strong></p>
+      <ul>
+        <li>Cabana restroom and shower</li>
+        <li>Pool shower and fill line</li>
+        <li>Irrigation (pending one remaining cut pipe which was donely by bad pool vendor and after Oliver Morgan hired an unlicensed plumber to work on irrigation potable water lines Jessie @ Bel-Air-X, a landscaper with no CFC license to work on potable water pipes.)</li>
+      </ul>
 
-    <p>The repair saved thousands in HOA funds and avoided a dues increase. All work was done transparently and lawfully under homeowner proxy authority.</p>
+      <p>The repair saved thousands in HOA funds and avoided a dues increase. All work was done transparently and lawfully under homeowner proxy authority.</p>
 
-    <p><strong>Update:</strong> After the satisfactory inspection, President Janelle Marazon attempted to interfere with the Department of Health report by submitting photos and making false claims about unlicensed work that were proven false. DOH officials Alan Dang and Andrew Halula rejected these claims and confirmed the pool remains open and compliant despite her attempts to sabotage and hurt the homeowners.</p>
+      <p><strong>Update:</strong> After the satisfactory inspection, President Janelle Marazon attempted to interfere with the Department of Health report by submitting photos and making false claims about unlicensed work that were proven false. DOH officials Alan Dang and Andrew Halula rejected these claims and confirmed the pool remains open and compliant despite her attempts to sabotage and hurt the homeowners.</p>
 
-    <h3>Watch the Department of Health Inspection:</h3>
-    
-    
-    <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
+      <h3>Watch the Department of Health Inspection:</h3>
+      
+     
+        <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
     <iframe style="width:1200px;height:480px;border-radius:8px;flex-shrink:0"
-    src=" https://www.youtube.com/embed/R3HV7O0Uo9s"
-    title="Surrey Ridge After Dusk CPO Pool Service"
-    allowfullscreen></iframe>
-    </div>
+            src=" https://www.youtube.com/embed/R3HV7O0Uo9s"
+            title="Surrey Ridge After Dusk CPO Pool Service"
+            allowfullscreen></iframe>
+      </div>
   
     </section>
     
-    <!-- Three videos side-by-side, same row -->
+         <!-- Three videos side-by-side, same row -->
 
 
     
 <section class="highlight-section"
-    style="background:linear-gradient(135deg,#1e3a8a 10%,#000 100%);
-    padding:40px;border-radius:16px;color:#fff;
-    box-shadow:0 8px 32px rgba(0,0,0,.3)">
+         style="background:linear-gradient(135deg,#1e3a8a 10%,#000 100%);
+                padding:40px;border-radius:16px;color:#fff;
+                box-shadow:0 8px 32px rgba(0,0,0,.3)">
   <h2 style="text-align:center;margin-bottom:25px">Surrey Ridge Community Pool</h2>
 
   <!-- flex row with fixed widths -->
 
     <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
     <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-    src="https://www.youtube.com/embed/l1K5i_YuDVc"
-    title="Surrey Ridge Aug 3 Pebbletec Cleaning"
-    allowfullscreen></iframe>
-    
+            src="https://www.youtube.com/embed/l1K5i_YuDVc"
+            title="Surrey Ridge Aug 3 Pebbletec Cleaning"
+            allowfullscreen></iframe>
+      
   <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
     <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-    src="https://www.youtube.com/embed/rBRRboUoYtw"
-    title="Surrey Ridge After Dusk CPO Pool Service"
-    allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/rBRRboUoYtw"
+            title="Surrey Ridge After Dusk CPO Pool Service"
+            allowfullscreen></iframe>
 
     <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-    src="https://www.youtube.com/embed/fRwMA2TyOVw"
-    title="Surrey Ridge Pool Phosphates Removal & Service"
-    allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/fRwMA2TyOVw"
+            title="Surrey Ridge Pool Phosphates Removal & Service"
+            allowfullscreen></iframe>
 
     <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-    src="https://youtube.com/embed/j5FXR-YgxCc"
-    title="Surrey Ridge July 4th CPO Service - Scott Davis"
-    allowfullscreen></iframe>
+            src="https://youtube.com/embed/j5FXR-YgxCc"
+            title="Surrey Ridge July 4th CPO Service - Scott Davis"
+            allowfullscreen></iframe>
   </div>
 </section>
-    <!-- Pool Chemistry Dashboard Section -->
-    <section class="highlight-section">
-    <h2>Pool Chemistry Trends Health and Safety Dashboard</h2>
-    <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">Comprehensive overview of pool chemical balance, trends, and safety metrics</p>
-    
-    <div style="text-align: center; margin: 20px 0;">
-    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/surrey_ridge_pool_dashboard.png" 
-    alt="Surrey Ridge Pool Chemistry Dashboard" 
-    style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2);" />
-    </div>
-    
-    <p style="text-align: center; margin-top: 25px; font-style: italic; opacity: 0.8; font-size: 0.95em;">
-    Real-time monitoring and analysis of pool chemistry for optimal safety and compliance
-    </p>
-    </section>
+            <!-- Pool Chemistry Dashboard Section -->
+            <section class="highlight-section">
+                <h2>Pool Chemistry Trends Health and Safety Dashboard</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">Comprehensive overview of pool chemical balance, trends, and safety metrics</p>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/surrey_ridge_pool_dashboard.png" 
+                         alt="Surrey Ridge Pool Chemistry Dashboard" 
+                         style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2);" />
+                </div>
+                
+                <p style="text-align: center; margin-top: 25px; font-style: italic; opacity: 0.8; font-size: 0.95em;">
+                    Real-time monitoring and analysis of pool chemistry for optimal safety and compliance
+                </p>
+            </section>
     
 
     <!-- POOL MAINTENANCE LOG -->
     <section class="highlight-section" style="background:linear-gradient(135deg,#1e3a8a 0%,#1e40af 100%);padding:40px;border-radius:16px;color:#fff">
-    <h2 style="text-align:center;margin-bottom:10px;font-size:2.2em">Pool Maintenance Log</h2>
-    <p style="text-align:center;margin-bottom:30px;font-size:1.1em;opacity:.9">FL Department of Health DH921 Log readings, actions, and notes on pool conditions</p>
-    <div class="pool-log-container">
-    <div class="pool-log-wrapper">
-    <table class="pool-log-table">
-    <div class="pool-log-wrapper">
+      <h2 style="text-align:center;margin-bottom:10px;font-size:2.2em">Pool Maintenance Log</h2>
+      <p style="text-align:center;margin-bottom:30px;font-size:1.1em;opacity:.9">FL Department of Health DH921 Log readings, actions, and notes on pool conditions</p>
+      <div class="pool-log-container">
+        <div class="pool-log-wrapper">
+          <table class="pool-log-table">
+            <div class="pool-log-wrapper">
   <table class="pool-log-table">
-    <thead>
-    <tr>
-    <th>Day</th>
-    <th>Time</th>
-    <th>pH</th>
-    <th>Stenner 1</th>
-    <th>Cl PPM</th>
-    <th>Stenner 2</th>
-    <th>Comb Cl</th>
-    <th>Pump Speed</th>
-    <th>Vacuum</th>
-    <th>Influent PSI</th>
-    <th>Effluent PSI</th>
-    <th>Flow GPM</th>
-    <th>Backwash</th>
-    <th>Vacuumed</th>
-    <th>Water Level</th>
-    <th>Swimmers</th>
-    <th>Alk PPM</th>
-    <th>Hardness</th>
-    <th>CYA</th>
-    <th>TDS</th>
-    <th>Phosphate</th>
-    <th>Actions</th>
-    <th>Notes</th>
-    </tr>
-    </thead>
-    <tbody id="pool-log-tbody"></tbody>
-    </table>
-    </div>
-    </div>
-    <p style="text-align:center;margin-top:25px;font-style:italic;opacity:.8;font-size:.95em">Logs updated regularly with professional monitoring standards</p>
+     <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>pH</th>
+            <th>Stenner 1</th>
+            <th>Cl PPM</th>
+            <th>Stenner 2</th>
+            <th>Comb Cl</th>
+            <th>Pump Speed</th>
+            <th>Vacuum</th>
+            <th>Influent PSI</th>
+            <th>Effluent PSI</th>
+            <th>Flow GPM</th>
+            <th>Backwash</th>
+            <th>Vacuumed</th>
+            <th>Water Level</th>
+            <th>Swimmers</th>
+            <th>Alk PPM</th>
+            <th>Hardness</th>
+            <th>CYA</th>
+            <th>TDS</th>
+            <th>Phosphate</th>
+            <th>Actions</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+            <tbody id="pool-log-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:25px;font-style:italic;opacity:.8;font-size:.95em">Logs updated regularly with professional monitoring standards</p>
     </section>
 
     <!-- CPO COSTS & REIMBURSEMENTS -->
     <section class="highlight-section">
-    <h2>CPO Costs and Reimbursements</h2>
-    <p style="text-align:center;margin-bottom:30px;font-size:1.1em;opacity:.9">Comprehensive CPO costs, out-of-pocket expenses and lag time for reimbursement</p>
-    <div class="pool-log-container">
-    <div class="pool-log-wrapper">
-    <table class="pool-log-table">
-    <thead>
-    <tr>
-    <th>Date</th>
-    <th>Type</th>
-    <th>Vendor</th>
-    <th>Items</th>
-    <th>Amount</th>
-    <th>Rolling Total</th>
-    <th>Req Date</th>
-    <th>Recd Date</th>
-    <th>Out of pocket</th>
-    <th>Morgan Delay</th>
-    
-    </tr>
-    </thead>
-    <tbody id="cpo-reimbursements-tbody"></tbody>
-    </table>
-    </div>
-    </div>
+      <h2>CPO Costs and Reimbursements</h2>
+      <p style="text-align:center;margin-bottom:30px;font-size:1.1em;opacity:.9">Comprehensive CPO costs, out-of-pocket expenses and lag time for reimbursement</p>
+      <div class="pool-log-container">
+        <div class="pool-log-wrapper">
+          <table class="pool-log-table">
+            <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Vendor</th>
+            <th>Items</th>
+            <th>Amount</th>
+            <th>Rolling Total</th>
+            <th>Req Date</th>
+            <th>Recd Date</th>
+            <th>Out of pocket</th>
+            <th>Morgan Delay</th>
+          
+          </tr>
+        </thead>
+            <tbody id="cpo-reimbursements-tbody"></tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- SCOTT DAVIS – POOL MAINTENANCE & REIMBURSEMENT ISSUES -->
     <section class="highlight-section">
-    <h2>Scott Davis – Pool Maintenance & Reimbursement Issues</h2>
-    <p><strong>Scott Davis is the only reason the pool has re-opened and remained open.</strong> Fighting off what can only be interpreted in my opinion as intentional sabotage, former directors removing hoses from the pool and intimidating neighbors into disallowing water usage all to politicize and damage homeowners. Scott has taken decisive and necessary steps to preserve HOA assets, protect homeowner amenities, and ensure safety and security of residents – all at his own personal expense. Meanwhile directors subject to recall have abused their authority, logging into security cameras, eavesdropping on his conversations, intimidating residents, ejecting homeowners from the common area and pool, taking unauthorized photos and videos of Mr. Davis while working in the common area and attempting to forward them to the Dept of Health, making claims of wrongdoing, which were immediately shut down by the Dept of Health inspectors at every level. Mr. Davis has an excellent relationship and rapport with the Dept of Health, has the same CPO certification that the inspectors have and works closely with them in concert to ensure the safety and well-being of the residents while remaining in compliance and above board.</p>
+      <h2>Scott Davis – Pool Maintenance & Reimbursement Issues</h2>
+      <p><strong>Scott Davis is the only reason the pool has re-opened and remained open.</strong> Fighting off what can only be interpreted in my opinion as intentional sabotage, former directors removing hoses from the pool and intimidating neighbors into disallowing water usage all to politicize and damage homeowners. Scott has taken decisive and necessary steps to preserve HOA assets, protect homeowner amenities, and ensure safety and security of residents – all at his own personal expense. Meanwhile directors subject to recall have abused their authority, logging into security cameras, eavesdropping on his conversations, intimidating residents, ejecting homeowners from the common area and pool, taking unauthorized photos and videos of Mr. Davis while working in the common area and attempting to forward them to the Dept of Health, making claims of wrongdoing, which were immediately shut down by the Dept of Health inspectors at every level. Mr. Davis has an excellent relationship and rapport with the Dept of Health, has the same CPO certification that the inspectors have and works closely with them in concert to ensure the safety and well-being of the residents while remaining in compliance and above board.</p>
 
-    <h3>Ongoing Financial Hardships Created by Recalled Directors</h3>
-    <p>The directors subject to recall and the management company have appear to have worked together to create financial hardships for the proxy holder and homeowner representative. Time and time again, Mr. Davis has fronted money at his own expense for pool chemicals and maintenance to ensure amenities remain open for homeowners and their children. He has come out of pocket with emergency repairs using a vetted and licensed CFC plumber to repair a water pipe damaged by a bad vendor propped up by recalled directors and a bad management company that has been served multiple curative notices for poor performance. The same management company that gaslit the community, closed the pool without authority or board vote, lied to homeowners about a fake leak in the pool that did not exist to try to cover up for illegal chlorine levels that violated Dept of Health standards. When I tried to tell the community about what was happening? They retaliated and tried to destroy me. On March 10, 2025 and an open notice board meeting, Janelle Marazon skipped over most of the agenda items so she could spend most of our time trying to enact an illegal censorship policy preventing Mr. Davis from contacting 911, 811, the Dept of Health or any other governing agency prior to getting approval from her and the board so she could control all narratives like she has attempted to do since 2021, eight months before we had legal authority to operate as an association. Once she got recalled directors to vote on this censorship policy in order to manufacture due cause and create the recipe to manufacture cause for removal of a director, within a week the entire board was served with certified letters, formally objecting to this illegal policy of censorship that would prevent me from whistleblowing and preventing injury to homeowners and their children. Not another word has ever been spoken about this illegal policy since those certified letters were served, but since then they have attempted to remove me from the board on April 14 a retaliatory and illegal act and failed because homeowners were finally paying attention to the wrongdoings.</p>
+      <h3>Ongoing Financial Hardships Created by Recalled Directors</h3>
+      <p>The directors subject to recall and the management company have appear to have worked together to create financial hardships for the proxy holder and homeowner representative. Time and time again, Mr. Davis has fronted money at his own expense for pool chemicals and maintenance to ensure amenities remain open for homeowners and their children. He has come out of pocket with emergency repairs using a vetted and licensed CFC plumber to repair a water pipe damaged by a bad vendor propped up by recalled directors and a bad management company that has been served multiple curative notices for poor performance. The same management company that gaslit the community, closed the pool without authority or board vote, lied to homeowners about a fake leak in the pool that did not exist to try to cover up for illegal chlorine levels that violated Dept of Health standards. When I tried to tell the community about what was happening? They retaliated and tried to destroy me. On March 10, 2025 and an open notice board meeting, Janelle Marazon skipped over most of the agenda items so she could spend most of our time trying to enact an illegal censorship policy preventing Mr. Davis from contacting 911, 811, the Dept of Health or any other governing agency prior to getting approval from her and the board so she could control all narratives like she has attempted to do since 2021, eight months before we had legal authority to operate as an association. Once she got recalled directors to vote on this censorship policy in order to manufacture due cause and create the recipe to manufacture cause for removal of a director, within a week the entire board was served with certified letters, formally objecting to this illegal policy of censorship that would prevent me from whistleblowing and preventing injury to homeowners and their children. Not another word has ever been spoken about this illegal policy since those certified letters were served, but since then they have attempted to remove me from the board on April 14 a retaliatory and illegal act and failed because homeowners were finally paying attention to the wrongdoings.</p>
 
-    <h3>Broken Promises of Reimbursement</h3>
-    <p>Despite repeated promises of reimbursement from recalled Director Janelle Marazon at open noticed board meetings, including the June 16, 2025 meeting where she promised and assured all homeowners that if Mr. Davis came out of pocket to continue supporting the pool, she would immediately reimburse him – <strong>no such reimbursement has been issued since this meeting as it was all for show</strong>. They wanted the appearance that they were not withholding funds and creating financial harm to another director because it was not a good look while under DBPR review. So they did the bare minimum, slow-paid nearly 90-day-old out-of-pocket expenses only to ignore the current reimbursement requests, the opposite of what was promised on recorded June 16th board meeting minutes.</p>
+      <h3>Broken Promises of Reimbursement</h3>
+      <p>Despite repeated promises of reimbursement from recalled Director Janelle Marazon at open noticed board meetings, including the June 16, 2025 meeting where she promised and assured all homeowners that if Mr. Davis came out of pocket to continue supporting the pool, she would immediately reimburse him – <strong>no such reimbursement has been issued since this meeting as it was all for show</strong>. They wanted the appearance that they were not withholding funds and creating financial harm to another director because it was not a good look while under DBPR review. So they did the bare minimum, slow-paid nearly 90-day-old out-of-pocket expenses only to ignore the current reimbursement requests, the opposite of what was promised on recorded June 16th board meeting minutes.</p>
 
-    <p>On June 27, 2025, Scott Davis submitted a reimbursement request for pool chemicals and everything that was previously approved at the June 16 open meeting, with board resolution votes confirming the motion passed. Despite this formal agreement, no reimbursement has been provided per the board's own resolution while Oliver Morgan has paid himself, sent funds to Sarah Webner for nearly $6,000.00 and shafted the director who works for free and finances the association operations out of his own pockets without reimbursement.</p>
+      <p>On June 27, 2025, Scott Davis submitted a reimbursement request for pool chemicals and everything that was previously approved at the June 16 open meeting, with board resolution votes confirming the motion passed. Despite this formal agreement, no reimbursement has been provided per the board's own resolution while Oliver Morgan has paid himself, sent funds to Sarah Webner for nearly $6,000.00 and shafted the director who works for free and finances the association operations out of his own pockets without reimbursement.</p>
 
-    <h3>Darwin Johnson's False Statement</h3>
-    <p>At the written recall rejection meeting, Darwin Johnson read a prepared statement that had been written for him, claiming that <strong>"the board had not withheld reimbursement payments to director Davis."</strong> This statement is <strong>100 % false and provably so</strong>.</p>
+      <h3>Darwin Johnson's False Statement</h3>
+      <p>At the written recall rejection meeting, Darwin Johnson read a prepared statement that had been written for him, claiming that <strong>"the board had not withheld reimbursement payments to director Davis."</strong> This statement is <strong>100 % false and provably so</strong>.</p>
 
-    <p>Mr. Davis has the receipts and documentation proving that reimbursements have been withheld despite board resolutions and promises to swiftly take care of them. The reason Scott Davis has not and can not be sued for his statements is because everything he has stated can be proven TRUE with documentation that most homeowners have already seen. Nobody is falling for their hail mary gaslighting because nobody is buying the little boy cried wolf act anymore. Mr. Davis has worked in common areas for months streaming 4k gopro footage to prevent false allegations by bad directors and management company that they have attempted time and time again to no avail. The TRUTH SHALL SET YOU FREE.</p>
+      <p>Mr. Davis has the receipts and documentation proving that reimbursements have been withheld despite board resolutions and promises to swiftly take care of them. The reason Scott Davis has not and can not be sued for his statements is because everything he has stated can be proven TRUE with documentation that most homeowners have already seen. Nobody is falling for their hail mary gaslighting because nobody is buying the little boy cried wolf act anymore. Mr. Davis has worked in common areas for months streaming 4k gopro footage to prevent false allegations by bad directors and management company that they have attempted time and time again to no avail. The TRUTH SHALL SET YOU FREE.</p>
 
-    <h3>The evidence is clear:</h3>
-    <p>The recalled directors have systematically withheld reimbursements, created censorship policies and harassed Mr. Davis while forcing him to personally fund essential pool maintenance to keep amenities open for the community, meanwhile reimbursing themselves instantly, funding attorneys with homeowner money and even paying vendors that have not shown up to work in 28 days straight! Mr. Davis is willing to endure the hardships because he knows there are good replacement directors ready to come on board and do what is best for the community.</p>
+      <h3>The evidence is clear:</h3>
+      <p>The recalled directors have systematically withheld reimbursements, created censorship policies and harassed Mr. Davis while forcing him to personally fund essential pool maintenance to keep amenities open for the community, meanwhile reimbursing themselves instantly, funding attorneys with homeowner money and even paying vendors that have not shown up to work in 28 days straight! Mr. Davis is willing to endure the hardships because he knows there are good replacement directors ready to come on board and do what is best for the community.</p>
     </section>
 
     <!-- POOL SABOTAGE AND VENDOR ISSUES -->
     <section class="highlight-section">
-    <h2>Pool Damage and Vendor Issues</h2>
+      <h2>Pool Damage and Vendor Issues</h2>
 
-    <h3>Pool Vendor Interactions Terminated</h3>
-    <p>The AlwaysClear pool vendor relationship was concluded for many reasons, not limited to repeated safety violations (proven on Dept of Health Inspection Reports), falsified DH921 logs (admitted on video), removing Surrey Ridge equipment from the premises (documented on video), taking a filter from our Hayward cartridge filter housing before getting caught in the act and forced to return the property by staff (documented on video). Many issues were cited as "UNSATISFACTORY" by documented Department of Health standards which were cited on publicly displayed DOH Inspection Reports.</p>
+      <h3>Pool Vendor Interactions Terminated</h3>
+      <p>The AlwaysClear pool vendor relationship was concluded for many reasons, not limited to repeated safety violations (proven on Dept of Health Inspection Reports), falsified DH921 logs (admitted on video), removing Surrey Ridge equipment from the premises (documented on video), taking a filter from our Hayward cartridge filter housing before getting caught in the act and forced to return the property by staff (documented on video). Many issues were cited as "UNSATISFACTORY" by documented Department of Health standards which were cited on publicly displayed DOH Inspection Reports.</p>
 
-    <h3>Key Issues with Prior Vendor:</h3>
-    <ul>
-    <li><strong>Periodic Illegal Chlorine Levels:</strong> Allowed free chlorine levels above 10 ppm multiple times and even as low as ZERO (and did not close the pool per DOH requirement), violating DOH safety standards (PROVEN IN DEPT OF HEALTH DH921 LOGS AND DOCUMENTED ON VIDEO)</li>
-    <li><strong>Chemical Tank Neglect:</strong> Repeatedly allowed chemical tanks to run empty for days</li>
-    <li><strong>Unauthorized Chemical Addition:</strong> Caused to be added- chemicals without CPO notification or approval and lacked proper reagents and test kits to even test for proper levels (non-CPO employee could not test chlorine without reagents, documented on video).</li>
-    <li><strong>Equipment Damage:</strong> Cut a potable water line with a hacksaw without authorization or CFC plumbing license on (documented on VIDEO), faked leak tests (PROVEN and by parallel CPO testing), falsified DH921 chemistry logs to Department of Health (admitted on VIDEO), cut apart various 2" plumbing pipes for no apparent reason (not disputed). Chose wrong pump specs for our engineering permit twice (DOH PERMIT REQUIRES 140GPM! Pump cannot support 140 GPM) Claimed we needed a Hayward filter housing replaced for $1,200.00 when in fact he was missing a filter from the unit. (Admitted on Video)</li>
-    <li><strong>Poor Communication:</strong> Failed to respond to CPO instructions and safety concerns. The directors that supported his service have been recalled by homeowner majority interest TWICE. (DBPR issuing a Summary Final Order imminently.)</li>
-    <li><strong>Attendance Issues:</strong> Failed to show up for scheduled regular maintenance, had non CPO working under him after we were told only a CPT/CPO would service, failed to equip staff properly as was missing reagent R-0001 in employee chlorine testing kit and could not effectively test for legal or accurate chlorine levels. (Proven on VIDEO).</li>
-    </ul>
+      <h3>Key Issues with Prior Vendor:</h3>
+      <ul>
+        <li><strong>Periodic Illegal Chlorine Levels:</strong> Allowed free chlorine levels above 10 ppm multiple times and even as low as ZERO (and did not close the pool per DOH requirement), violating DOH safety standards (PROVEN IN DEPT OF HEALTH DH921 LOGS AND DOCUMENTED ON VIDEO)</li>
+        <li><strong>Chemical Tank Neglect:</strong> Repeatedly allowed chemical tanks to run empty for days</li>
+        <li><strong>Unauthorized Chemical Addition:</strong> Caused to be added- chemicals without CPO notification or approval and lacked proper reagents and test kits to even test for proper levels (non-CPO employee could not test chlorine without reagents, documented on video).</li>
+        <li><strong>Equipment Damage:</strong> Cut a potable water line with a hacksaw without authorization or CFC plumbing license on (documented on VIDEO), faked leak tests (PROVEN and by parallel CPO testing), falsified DH921 chemistry logs to Department of Health (admitted on VIDEO), cut apart various 2" plumbing pipes for no apparent reason (not disputed). Chose wrong pump specs for our engineering permit twice (DOH PERMIT REQUIRES 140GPM! Pump cannot support 140 GPM) Claimed we needed a Hayward filter housing replaced for $1,200.00 when in fact he was missing a filter from the unit. (Admitted on Video)</li>
+        <li><strong>Poor Communication:</strong> Failed to respond to CPO instructions and safety concerns. The directors that supported his service have been recalled by homeowner majority interest TWICE. (DBPR issuing a Summary Final Order imminently.)</li>
+        <li><strong>Attendance Issues:</strong> Failed to show up for scheduled regular maintenance, had non CPO working under him after we were told only a CPT/CPO would service, failed to equip staff properly as was missing reagent R-0001 in employee chlorine testing kit and could not effectively test for legal or accurate chlorine levels. (Proven on VIDEO).</li>
+      </ul>
 
-    <h3>Oliver Morgan and Management Company Gaslighting</h3>
-    <p>Oliver Morgan of Morgan Property Solutions and the management company engaged in systematic gaslighting of the community regarding pool issues:</p>
-    <ul>
-    <li><strong>False Leak Claims:</strong> Lied to homeowners about a non-existent pool leak to cover up chemical violations that were unsafe for homeowners and their families (10ppm+ exceeds DOH limit) VERIFIED ON VIDEO.</li>
-    <li><strong>Unauthorized Pool Closure:</strong> Closed the pool without board vote or proper authority</li>
-    <li><strong>Vendor Protection:</strong> Continued to support and pay the prior vendor despite documented Dept of Health issues, pool closures, unsatisfactory inspections and not accepting responsibility for unlicensed plumbing without a CFC plumbing license.</li>
-    <li><strong>Retaliation:</strong> Attempted to prevent Scott Davis from contacting DOH and other authorities via various methods not limited to taking votes on an illegal censorship policy designed to prevent Dept of Health contact when violations occurred without first getting approval.</li>
-    <li><strong>Financial Mismanagement:</strong> Paid vendors who weren't performing and some not even showing up in 28 days, while withholding reimbursements from Scott Davis</li>
-    </ul>
+      <h3>Oliver Morgan and Management Company Gaslighting</h3>
+      <p>Oliver Morgan of Morgan Property Solutions and the management company engaged in systematic gaslighting of the community regarding pool issues:</p>
+      <ul>
+        <li><strong>False Leak Claims:</strong> Lied to homeowners about a non-existent pool leak to cover up chemical violations that were unsafe for homeowners and their families (10ppm+ exceeds DOH limit) VERIFIED ON VIDEO.</li>
+        <li><strong>Unauthorized Pool Closure:</strong> Closed the pool without board vote or proper authority</li>
+        <li><strong>Vendor Protection:</strong> Continued to support and pay the prior vendor despite documented Dept of Health issues, pool closures, unsatisfactory inspections and not accepting responsibility for unlicensed plumbing without a CFC plumbing license.</li>
+        <li><strong>Retaliation:</strong> Attempted to prevent Scott Davis from contacting DOH and other authorities via various methods not limited to taking votes on an illegal censorship policy designed to prevent Dept of Health contact when violations occurred without first getting approval.</li>
+        <li><strong>Financial Mismanagement:</strong> Paid vendors who weren't performing and some not even showing up in 28 days, while withholding reimbursements from Scott Davis</li>
+      </ul>
 
-    <h3>Community Pool Problems Videos</h3>
-    <p>Watch documented evidence of continued issues:</p>
-    <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/dx9K9Y-hPYE" title="Surrey Ridge Pool Damage Documentation" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center;">
-    <a href="https://studio.youtube.com/playlist/PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ/videos" target="_blank">View full playlist on YouTube</a>
-    </p>
+      <h3>Community Pool Problems Videos</h3>
+      <p>Watch documented evidence of continued issues:</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dx9K9Y-hPYE" title="Surrey Ridge Pool Damage Documentation" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center;">
+        <a href="https://studio.youtube.com/playlist/PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ/videos" target="_blank">View full playlist on YouTube</a>
+      </p>
     </section>
 
     <!-- CPO CERTIFICATION & PROFESSIONAL STANDARDS -->
     <section class="highlight-section">
-    <h2>CPO Certification and Professional Standards</h2>
+      <h2>CPO Certification and Professional Standards</h2>
 
-    <h3>Scott Davis – Certified Pool Operator (CPO)</h3>
-    <p>Scott Davis holds the same Certified Pool Operator (CPO) certification as Department of Health inspectors, ensuring professional-level pool maintenance and safety standards.</p>
+      <h3>Scott Davis – Certified Pool Operator (CPO)</h3>
+      <p>Scott Davis holds the same Certified Pool Operator (CPO) certification as Department of Health inspectors, ensuring professional-level pool maintenance and safety standards.</p>
 
-    <h3>CPO Responsibilities and Standards:</h3>
-    <ul>
-    <li><strong>Water Chemistry Management:</strong> Maintaining proper pH, chlorine, and alkalinity levels</li>
-    <li><strong>Equipment Monitoring:</strong> Regular inspection and maintenance of filtration systems</li>
-    <li><strong>Safety Compliance:</strong> Ensuring all operations meet DOH and safety standards</li>
-    <li><strong>Documentation:</strong> Maintaining detailed logs of all pool maintenance activities</li>
-    <li><strong>Emergency Response:</strong> Immediate action on safety concerns and equipment failures</li>
-    <li><strong>Regulatory Liaison:</strong> Direct communication with DOH inspectors and officials</li>
-    </ul>
+      <h3>CPO Responsibilities and Standards:</h3>
+      <ul>
+        <li><strong>Water Chemistry Management:</strong> Maintaining proper pH, chlorine, and alkalinity levels</li>
+        <li><strong>Equipment Monitoring:</strong> Regular inspection and maintenance of filtration systems</li>
+        <li><strong>Safety Compliance:</strong> Ensuring all operations meet DOH and safety standards</li>
+        <li><strong>Documentation:</strong> Maintaining detailed logs of all pool maintenance activities</li>
+        <li><strong>Emergency Response:</strong> Immediate action on safety concerns and equipment failures</li>
+        <li><strong>Regulatory Liaison:</strong> Direct communication with DOH inspectors and officials</li>
+      </ul>
 
-    <h3>Professional Relationship with Department of Health</h3>
-    <p>Scott Davis has established an excellent working relationship with DOH officials, including:</p>
-    <ul>
-    <li><strong>Alan Dang:</strong> DOH Inspector who approved pool reopening</li>
-    <li><strong>Andrew Halula:</strong> DOH Official who rejected false claims from Janelle Marazon that the pool was repaired illegally</li>
-    <li><strong>Person in Charge Designation:</strong> DOH specifically designated Scott Davis as the responsible party on the association's health permit</li>
-    <li><strong>Trusted Contact:</strong> DOH prefers to work directly with Scott Davis due to his professionalism and expertise</li>
-    </ul>
+      <h3>Professional Relationship with Department of Health</h3>
+      <p>Scott Davis has established an excellent working relationship with DOH officials, including:</p>
+      <ul>
+        <li><strong>Alan Dang:</strong> DOH Inspector who approved pool reopening</li>
+        <li><strong>Andrew Halula:</strong> DOH Official who rejected false claims from Janelle Marazon that the pool was repaired illegally</li>
+        <li><strong>Person in Charge Designation:</strong> DOH specifically designated Scott Davis as the responsible party on the association's health permit</li>
+        <li><strong>Trusted Contact:</strong> DOH prefers to work directly with Scott Davis due to his professionalism and expertise</li>
+      </ul>
 
-    <h3>Contrast with Previous Vendor Performance</h3>
-    <p>The difference between CPO-managed pool maintenance and vendor neglect is stark:</p>
-    <ul>
-    <li><strong>Before CPO Management:</strong> Perioodic Illegal chemical levels, empty tanks, equipment failures, fake leak tests, intentionally misled about equipment replacement needs (PROVEN).</li>
-    <li><strong>After CPO Management:</strong> Consistent safe levels, proper documentation, DOH approval, live DH921 chemical logs available online for homeowners and Dept of Health review</li>
-    <li><strong>Cost Savings:</strong> Thousands saved through proper maintenance and vendor accountability $295 to repair the plumbing AlwaysClear damaged (proven on VIDEO), instead of $6000.00 for Oliver Morgan's preferred vendor he attempted to contract.</li>
-    <li><strong>Safety Improvement:</strong> Zero safety violations since CPO took over, Langlier Saturation Index balanced water for the first time in 4 years.</li>
-    </ul>
+      <h3>Contrast with Previous Vendor Performance</h3>
+      <p>The difference between CPO-managed pool maintenance and vendor neglect is stark:</p>
+      <ul>
+        <li><strong>Before CPO Management:</strong> Perioodic Illegal chemical levels, empty tanks, equipment failures, fake leak tests, intentionally misled about equipment replacement needs (PROVEN).</li>
+        <li><strong>After CPO Management:</strong> Consistent safe levels, proper documentation, DOH approval, live DH921 chemical logs available online for homeowners and Dept of Health review</li>
+        <li><strong>Cost Savings:</strong> Thousands saved through proper maintenance and vendor accountability $295 to repair the plumbing AlwaysClear damaged (proven on VIDEO), instead of $6000.00 for Oliver Morgan's preferred vendor he attempted to contract.</li>
+        <li><strong>Safety Improvement:</strong> Zero safety violations since CPO took over, Langlier Saturation Index balanced water for the first time in 4 years.</li>
+      </ul>
     </section>
 
     <!-- POOL VIDEOS & DOCUMENTATION -->
     <section class="highlight-section">
-    <h2>Pool Videos and Documentation</h2>
+      <h2>Pool Videos and Documentation</h2>
 
-    <h3>Complete Pool Video Library</h3>
-    <p>Access the complete collection of pool-related videos documenting maintenance, issues, and improvements:</p>
-    <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/playlist?list=PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ" title="Surrey Ridge Pool Complete Video Library" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center;">
-    <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ" target="_blank">View Full Pool Video Playlist on YouTube</a>
-    </p>
+      <h3>Complete Pool Video Library</h3>
+      <p>Access the complete collection of pool-related videos documenting maintenance, issues, and improvements:</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/playlist?list=PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ" title="Surrey Ridge Pool Complete Video Library" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center;">
+        <a href="https://www.youtube.com/playlist?list=PLz1lcjAl9aqXfC7KpODIT7vNKPAWvROPJ" target="_blank">View Full Pool Video Playlist on YouTube</a>
+      </p>
 
-    <h3>Key Video Categories:</h3>
-    <ul>
-    <li><strong>Pool Maintenance:</strong> Daily CPO maintenance and chemical management</li>
-    <li><strong>DOH Inspections:</strong> Official Department of Health inspections and approvals</li>
-    <li><strong>Vendor Issues:</strong> Documentation of vendor issues and documented Department of Health UNSATISFACTORY report violations</li>
-    <li><strong>Sabotage Evidence:</strong> Recorded instances of what appears to be pool sabotage?</li>
-    <li><strong>Repair Work:</strong> Licensed CFC plumbing repairs and improvements</li>
-    <li><strong>Safety Compliance:</strong> Demonstrations of proper pool safety standards</li>
-    </ul>
+      <h3>Key Video Categories:</h3>
+      <ul>
+        <li><strong>Pool Maintenance:</strong> Daily CPO maintenance and chemical management</li>
+        <li><strong>DOH Inspections:</strong> Official Department of Health inspections and approvals</li>
+        <li><strong>Vendor Issues:</strong> Documentation of vendor issues and documented Department of Health UNSATISFACTORY report violations</li>
+        <li><strong>Sabotage Evidence:</strong> Recorded instances of what appears to be pool sabotage?</li>
+        <li><strong>Repair Work:</strong> Licensed CFC plumbing repairs and improvements</li>
+        <li><strong>Safety Compliance:</strong> Demonstrations of proper pool safety standards</li>
+      </ul>
 
-    <h3>Transparency and Accountability</h3>
-    <p>All pool work is documented with 4K GoPro footage to ensure transparency and prevent false allegations. This documentation has been crucial in:</p>
-    <ul>
-    <li>Proving compliance with DOH standards</li>
-    <li>Refuting false claims from recalled directors</li>
-    <li>Demonstrating proper maintenance procedures</li>
-    <li>Protecting against vendor and management company retaliation</li>
-    <li>Providing evidence for reimbursement requests</li>
-    </ul>
+      <h3>Transparency and Accountability</h3>
+      <p>All pool work is documented with 4K GoPro footage to ensure transparency and prevent false allegations. This documentation has been crucial in:</p>
+      <ul>
+        <li>Proving compliance with DOH standards</li>
+        <li>Refuting false claims from recalled directors</li>
+        <li>Demonstrating proper maintenance procedures</li>
+        <li>Protecting against vendor and management company retaliation</li>
+        <li>Providing evidence for reimbursement requests</li>
+      </ul>
     </section>
 
     <!-- CONTACT & RESOURCES -->
     <section class="highlight-section">
-    <h2>Pool-Related Resources and Contact</h2>
+      <h2>Pool-Related Resources and Contact</h2>
 
-    <h3>Department of Health Contacts</h3>
-    <ul>
-    <li><strong>Alan Dang:</strong> DOH Inspector - Pool Inspections</li>
-    <li><strong>Andrew Halula:</strong> DOH Official - Regulatory Compliance</li>
-    </ul>
+      <h3>Department of Health Contacts</h3>
+      <ul>
+        <li><strong>Alan Dang:</strong> DOH Inspector - Pool Inspections</li>
+        <li><strong>Andrew Halula:</strong> DOH Official - Regulatory Compliance</li>
+      </ul>
 
-    <h3>Licensed Contractors</h3>
-    <ul>
-    <li><strong>American Veteran Plumbing LLC:</strong> Licensed CFC Contractor - Pool Plumbing</li>
-    <li><strong>DBPR Verification:</strong> All contractors verified through Florida DBPR</li>
-    </ul>
+      <h3>Licensed Contractors</h3>
+      <ul>
+        <li><strong>American Veteran Plumbing LLC:</strong> Licensed CFC Contractor - Pool Plumbing</li>
+        <li><strong>DBPR Verification:</strong> All contractors verified through Florida DBPR</li>
+      </ul>
 
-  <script>
-  // Weather + Lightning logic (no API keys). Fallback: coordinates for Surrey Ridge, FL
-  (async () => {
-    const FALLBACK = { lat: 28.510, lon: -81.223, label: "Orlando, FL" };
-    const state = { lat: FALLBACK.lat, lon: FALLBACK.lon, z: 10 };
-    const $ = id => document.getElementById(id);
-    const kmhToMph = k => Math.round(k * 0.621371);
-    const wcode = c => ({
-      0:"Clear",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Rime fog",
-      51:"Drizzle",53:"Drizzle",55:"Drizzle",56:"Freezing drizzle",57:"Freezing drizzle",
-      61:"Rain",63:"Rain",65:"Rain",66:"Freezing rain",67:"Freezing rain",
-      71:"Snow",73:"Snow",75:"Snow",77:"Snow grains",80:"Showers",81:"Showers",82:"Showers",
-      85:"Snow showers",86:"Snow showers",95:"Thunderstorm",96:"T-storm hail",99:"T-storm hail"
-    }[c]||"—");
+      <h3>Pool Chemical Suppliers</h3>
+      <ul>
+        <li><strong>Pinch A Penny:</strong> Liquid Chlorine and testing supplies</li>
+        <li><strong>Amazon:</strong> Maintenance chemical needs</li>
+        <li><strong>Home Depot / Lowes:</strong> Muriatic Acid</li>
+      </ul>
 
-    function setLightning(lat, lon, z=state.z){
-      const url = `https://www.lightningmaps.org/?lang=en#m=oss;t=3;s=0;o=0;b=;ts=0;z=${z};lat=${lat};lng=${lon}`;
-      const iframe = $('wx-lm');
-      const fb = $('wx-lm-fallback');
-      // Try to load; if blocked by X-Frame-Options, Firefox will refuse. We also detect Firefox.
-      const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
-      if (isFirefox) {
-        // Hide iframe, show fallback
-        iframe.style.display = 'none';
-        fb.style.display = 'flex';
-      } else {
-        iframe.src = url;
-        // Ifonload/onerror are unreliable with XFO, but we keep graceful fallback after short delay
-        setTimeout(() => {
-          // If contentWindow is null or still empty, show fallback
-          try {
-            // Try to access location; if blocked by cross-origin, that's expected, so we just assume it's fine.
-            // We rely on user report; keep iframe visible for non-Firefox browsers.
-          } catch(e) {}
-        }, 1200);
-      }
-      // Update external open buttons
-      const open = () => window.open(url, '_blank');
-      const btn1 = $('wx-open-full');
-      const btn2 = $('wx-open-full-fallback');
-      if (btn1) btn1.onclick = open;
-      if (btn2) btn2.onclick = open;
-    }
-
-    async function geolocate(timeoutMs=3500){
-      return new Promise(resolve => {
-        if (!('geolocation' in navigator)) return resolve(null);
-        navigator.geolocation.getCurrentPosition(
-          pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
-          _ => resolve(null),
-          { enableHighAccuracy:false, timeout:timeoutMs, maximumAge:5*60*1000 }
-        );
-      });
-    }
-
-    const geo = await geolocate();
-    state.lat = geo?.lat ?? FALLBACK.lat;
-    state.lon = geo?.lon ?? FALLBACK.lon;
-
-    // Reverse geocode via NWS points
-    try {
-      const pt = await fetch(`https://api.weather.gov/points/${state.lat.toFixed(4)},${state.lon.toFixed(4)}`, {
-        headers: { 'Accept':'application/geo+json', 'User-Agent':'SurreyRidgePool/1.0 (webmaster@surreyridgehoarecall.org)' }
-      }).then(r => r.ok ? r.json() : null);
-      const city = pt?.properties?.relativeLocation?.properties?.city;
-      const st = pt?.properties?.relativeLocation?.properties?.state;
-      $('wx-location').textContent = city && st ? `${city}, ${st}` : `${FALLBACK.label}`;
-    } catch { $('wx-location').textContent = FALLBACK.label; }
-
-    // Current + 5-period forecast (Open-Meteo)
-    try {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${state.lat}&longitude=${state.lon}`+
-                  `&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code&hourly=temperature_2m,weather_code&timezone=auto`;
-      const data = await fetch(url).then(r => r.json());
-      const cur = data.current;
-      $('wx-temp').textContent  = `${Math.round(cur.temperature_2m)}°`;
-      $('wx-feels').textContent = `${Math.round(cur.apparent_temperature)}°`;
-      $('wx-humid').textContent = `${Math.round(cur.relative_humidity_2m)}%`;
-      $('wx-wind').textContent  = `${kmhToMph(cur.wind_speed_10m)} mph`;
-      $('wx-location').textContent += ` • ${wcode(cur.weather_code)}`;
-
-      // Build next 5 forecast cards using hourly data spaced ~3 hours
-      const times = data.hourly.time;
-      const temps = data.hourly.temperature_2m;
-      const codes = data.hourly.weather_code;
-      const nowIdx = Math.max(0, times.findIndex(t => new Date(t) > new Date()));
-      const picks = [nowIdx, nowIdx+3, nowIdx+6, nowIdx+9, nowIdx+12].filter(i => i < times.length);
-      const html = picks.map(i => {
-        const dt = new Date(times[i]);
-        const label = dt.toLocaleTimeString([], { hour:'numeric' });
-        return `<div style="background:rgba(30,58,138,.5);border:1px solid rgba(59,130,246,.35);border-radius:10px;padding:8px;text-align:center">
-                  <div style="font-size:.8rem;color:#cbd5e1">${label}</div>
-                  <div style="font-size:1.25rem;font-weight:700">${Math.round(temps[i])}°</div>
-                  <div style="font-size:.75rem;color:#a5b4fc">${wcode(codes[i])}</div>
-                </div>`;
-      }).join('');
-      $('wx-forecast').innerHTML = html;
-    } catch {}
-
-    // NWS Alerts
-    try {
-      const alerts = await fetch(`https://api.weather.gov/alerts/active?point=${state.lat},${state.lon}`, {
-        headers: { 'Accept':'application/geo+json', 'User-Agent':'SurreyRidgePool/1.0 (webmaster@surreyridgehoarecall.org)' }
-      }).then(r => r.json());
-      const feats = Array.isArray(alerts.features) ? alerts.features : [];
-      if (!feats.length) $('wx-alerts').textContent = 'No active alerts.';
-      else {
-        const list = document.createElement('ul');
-        list.style.margin = '6px 0 0 18px';
-        feats.forEach(f => {
-          const p = f.properties || {};
-          const li = document.createElement('li');
-          li.innerHTML = `<span style="display:inline-block;border:1px solid rgba(59,130,246,.4);padding:2px 8px;border-radius:999px;font-size:12px;margin-right:6px">${p.severity||'—'}</span>`+
-                         `<strong>${p.event || 'Alert'}</strong> — ${p.headline || p.description || ''}`+
-                         (p.effective ? ` <span style="font-size:12px;color:#cbd5e1">${new Date(p.effective).toLocaleString()}</span>` : '');
-          list.appendChild(li);
-        });
-        $('wx-alerts').innerHTML = '';
-        $('wx-alerts').appendChild(list);
-      }
-    } catch { $('wx-alerts').textContent = 'Alerts unavailable.'; }
-
-    // Lightning map init + controls
-    setLightning(state.lat, state.lon, state.z);
-    $('wx-zoom-in').onclick = () => { state.z = Math.min(14, state.z + 1); setLightning(state.lat, state.lon); };
-    $('wx-zoom-out').onclick = () => { state.z = Math.max(5, state.z - 1); setLightning(state.lat, state.lon); };
-    $('wx-open-full').onclick = () => window.open($('wx-lm').src, '_blank');
-  })();
-  </script>
-
-    <h3>Pool Chemical Suppliers</h3>
-    <ul>
-    <li><strong>Pinch A Penny:</strong> Liquid Chlorine and testing supplies</li>
-    <li><strong>Amazon:</strong> Maintenance chemical needs</li>
-    <li><strong>Home Depot / Lowes:</strong> Muriatic Acid</li>
-    </ul>
-
-    <h3>Contact Scott Davis (CPO)</h3>
-    <ul>
-    <li><strong>Email:</strong>scott@surreyridgehoarecall.org</a></li>
-    <li><strong>Emergency Pool Issues :</strong> Contact immediately for safety concerns via email or text</li>
-    <li><strong>Maintenance Requests:</strong> Submit through proper HOA channels</li>
-    <li><strong>Key Fob Access to Pool:</strong> Contact Scott Davis via email or text</li>
-    </ul>
+      <h3>Contact Scott Davis (CPO)</h3>
+      <ul>
+        <li><strong>Email:</strong>scott@surreyridgehoarecall.org</a></li>
+        <li><strong>Emergency Pool Issues :</strong> Contact immediately for safety concerns via email or text</li>
+        <li><strong>Maintenance Requests:</strong> Submit through proper HOA channels</li>
+        <li><strong>Key Fob Access to Pool:</strong> Contact Scott Davis via email or text</li>
+      </ul>
     </section>
   </div>
 
@@ -839,9 +658,9 @@ h2{
   const csv  = await resp.text();
 
   const rows = Papa.parse(csv, { header: true, skipEmptyLines: true })
-    .data
-    .slice(6)    // skip header + 6 junk
-    .reverse();    // newest on top
+                   .data
+                   .slice(6)                               // skip header + 6 junk
+                   .reverse();                             // newest on top
 
   document.getElementById('pool-log-tbody').innerHTML =
     rows.map(r => `<tr>${Object.values(r).map(v => `<td>${v || ''}</td>`).join('')}</tr>`).join('');
@@ -850,10 +669,10 @@ h2{
 
   
    <script> fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv")
-    .then(r=>r.text()).then(c=>{
-    const d=Papa.parse(c,{header:true,skipEmptyLines:true}).data.reverse();
-    document.getElementById('cpo-reimbursements-tbody').innerHTML=d.map(r=>`<tr>${Object.values(r).map(c=>`<td>${c||''}</td>`).join('')}</tr>`).join('');
-    });
+      .then(r=>r.text()).then(c=>{
+        const d=Papa.parse(c,{header:true,skipEmptyLines:true}).data.reverse();
+        document.getElementById('cpo-reimbursements-tbody').innerHTML=d.map(r=>`<tr>${Object.values(r).map(c=>`<td>${c||''}</td>`).join('')}</tr>`).join('');
+      });
   </script>
 </body>
 </html>
