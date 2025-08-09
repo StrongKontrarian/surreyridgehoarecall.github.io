@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ---------- GLOBAL ---------- */
+    /* ---- GLOBAL ---- */
     body{
       font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
       background:#1e1e1e;
@@ -29,7 +29,7 @@
     }
     .header{text-align:center;margin-bottom:40px}
 
-    /* ---------- NAVIGATION ---------- */
+    /* ---- NAVIGATION ---- */
     .nav-container{
       display:flex;
       justify-content:center;
@@ -94,10 +94,11 @@
       background:linear-gradient(145deg,#4a90e2,#357ab8);
       border-color:#4a90e2
     }
-  /* GLOBAL OVERRIDE – applies to ALL section boxes */
+
+    /* GLOBAL OVERRIDE – applies to ALL section boxes */
     .highlight-section,
     .section{
-      background:linear-gradient(135deg,#1e3a8a 10%,#000000 100%) !important;
+      background:linear-gradient(135deg,#1e3a8a 10%,#0000 100%) !important;
       color:#fff;
       border-radius:16px;
       box-shadow:0 8px 32px rgba(0,0,0,.3);
@@ -105,7 +106,7 @@
       margin:40px 0;
     }
 
-    /* ---------- SECTIONS & TABLES ---------- */
+    /* ---- SECTIONS & TABLES ---- */
     h1,h2{color:#fff;font-weight:600;letter-spacing:-.025em}
     h1{font-size:2.5rem;font-weight:700;margin-bottom:1rem}
     h2{font-size:1.875rem;margin-bottom:1.5rem;text-align:center}
@@ -137,18 +138,14 @@
       height:100%;
       border:none
     }
-    /* ---------- MOBILE FONT-SIZE FIX ---------- */
+
+    /* ---- MOBILE FONT-SIZE FIX ---- */
     @media (max-width: 768px) {
-      .highlight-section h1 {
-        font-size: 1.6rem;   /* ≈25 px */
-      }
-      .highlight-section h2 {
-        font-size: 1.35rem;  /* ≈22 px */
-        line-height: 1.25;
-      }
+      .highlight-section h1 { font-size: 1.6rem; }
+      .highlight-section h2 { font-size: 1.35rem; line-height: 1.25; }
     }
 
-    /* ---------- POOL LOG / CPO COSTS ---------- */
+    /* ---- POOL LOG / CPO COSTS ---- */
     .pool-log-container{
       background:linear-gradient(145deg,#f8fafc,#e2e8f0);
       border-radius:20px;
@@ -209,81 +206,70 @@
       color:#fff;
       text-shadow:1px 1px 2px rgba(0,0,0,.3)
     }
+
     /* Center every section header */
-h2{
-  text-align:center !important;
-}
-    h3{
-  text-align:center !important;
-}
- /* ---------- MOBILE FONT-SCALE FIX ---------- */
-@media (max-width: 768px) {
-  /* Global resets */
-  body{font-size:14px;line-height:1.45}
+    h2{ text-align:center !important; }
+    h3{ text-align:center !important; }
 
-  /* Headlines */
-  h1{font-size:1.5rem !important}   /* ~24 px */
-  h2{font-size:1.25rem !important}  /* ~20 px */
+    /* ---- MOBILE FONT-SCALE FIX ---- */
+    @media (max-width: 768px) {
+      /* Global resets */
+      body{font-size:14px;line-height:1.45}
 
-  /* Paragraphs & lists */
-  p,li{font-size:.875rem !important} /* ~14 px */
+      /* Headlines */
+      h1{font-size:1.5rem !important}
+      h2{font-size:1.25rem !important}
 
-  /* Nav-box labels */
-  .nav-box .title{font-size:7px !important}
-  .nav-box.center-box .title{font-size:8px !important}
-  
-  @media (max-width: 768px) {
-  .pool-log-container .pool-log-wrapper {
-    padding: 4px 0 0 0;   /* remove top gap */
-  }
-}
-  
-  /* ---------- MOBILE ONLY ≤ 768 px ---------- */
-@media (max-width: 768px) {
+      /* Paragraphs & lists */
+      p,li{font-size:.875rem !important}
 
-  /* 1. SHRINK IFRAMES (three-across, single, etc.) */
-  .video-container iframe,
-  .highlight-section iframe {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9;
-    max-width: 100%;
-  }
+      /* Nav-box labels */
+      .nav-box .title{font-size:7px !important}
+      .nav-box.center-box .title{font-size:8px !important}
 
-  /* 2. POOL-LOG & CPO-REIMBURSEMENT TABLES */
-  .pool-log-table,
-  .pool-log-table th,
-  .pool-log-table td {
-    font-size: 10px !important;
-    line-height: 1.1;
-    padding: 4px 2px !important;
-  }
-  
-  @media (max-width: 768px) {
-  /* stack videos + reduce width by 20 px */
-  .highlight-section > div[style*="display:flex"] {
-    flex-direction: column !important;
-    align-items: center;
-  }
-  .highlight-section iframe {
-    width: calc(100%) !important;
-    max-width: calc(100%) !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9;
-    margin: 1px 0 !important;
-  }
-}
+      /* Pool-log wrapper top gap */
+      .pool-log-container .pool-log-wrapper { padding: 4px 0 0 0; }
 
-  /* Optional – allow horizontal scroll instead of tiny text if you prefer */
-  .pool-log-wrapper {
-    overflow-x: auto;
-  }
-}
+      /* 1. SHRINK IFRAMES (three-across, single, etc.) */
+      .video-container iframe,
+      .highlight-section iframe {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+      }
 
-  /* Tables */
-  .pool-log-table th,
-  .pool-log-table td{font-size:.6em !important}
-}
+      /* 2. POOL-LOG & CPO-REIMBURSEMENT TABLES */
+      .pool-log-table,
+      .pool-log-table th,
+      .pool-log-table td {
+        font-size: 10px !important;
+        line-height: 1.1;
+        padding: 4px 2px !important;
+      }
+
+      /* stack videos + reduce width */
+      .highlight-section > div[style*="display:flex"] {
+        flex-direction: column !important;
+        align-items: center;
+      }
+      .highlight-section iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+        margin: 1px 0 !important;
+      }
+
+      /* Optional – allow horizontal scroll */
+      .pool-log-wrapper {
+        overflow-x: auto;
+      }
+    }
+
+    /* Tables */
+    .pool-log-table th,
+    .pool-log-table td{font-size:.6em !important}
   </style>
 </head>
 <body>
@@ -325,6 +311,311 @@ h2{
       <p style="font-size:1.125rem;color:#b0b0b0;margin-bottom:2rem;">
         Comprehensive documentation of pool maintenance, issues, and Scott Davis's efforts to keep amenities open for homeowners
       </p>
+
+      <!-- POOL WEATHER: Comprehensive Dashboard (fixed Orlando 32825) -->
+      <section id="pool-weather" style="background:linear-gradient(135deg,#1e3a8a 10%,#000 100%); padding:40px; border-radius:16px; color:#fff; box-shadow:0 8px 32px rgba(0,0,0,.3);">
+        <style>
+          /* Scoped weather styles */
+          #pool-weather .wrap{max-width:1100px;margin:0 auto}
+          #pool-weather h2{margin-top:0}
+          #pool-weather .grid{display:grid;grid-template-columns:1fr;gap:16px}
+          @media(min-width:900px){#pool-weather .grid{grid-template-columns:1.2fr 1fr}}
+          #pool-weather .card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:16px}
+          #pool-weather .tabs{display:flex;gap:8px;margin-top:8px}
+          #pool-weather .tab-btn{background:#1f2937;border:1px solid #1f2937;color:#cbd5e1;padding:6px 10px;border-radius:8px;cursor:pointer}
+          #pool-weather .tab-btn.active{background:#0b1220;color:#e5e7eb;border-color:#2b3445}
+          #pool-weather .tab-panel{display:none;margin-top:10px}
+          #pool-weather .tab-panel.active{display:block}
+          #pool-weather .now{display:grid;grid-template-columns:1fr;gap:12px}
+          @media(min-width:700px){#pool-weather .now{grid-template-columns:1fr 1fr}}
+          #pool-weather .big{font-size:2.6rem;font-weight:600}
+          #pool-weather .row{display:flex;gap:12px;flex-wrap:wrap}
+          #pool-weather .chip{background:#1f2937;border:1px solid #1f2937;padding:6px 10px;border-radius:8px;color:#cbd5e1;font-size:.92rem}
+          #pool-weather .chip strong{color:#e5e7eb}
+          #pool-weather .hourly-wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;overflow-x:auto;padding-bottom:8px}
+          @media(max-width:900px){#pool-weather .hourly-wrap{grid-template-columns:repeat(4,1fr)}}
+          @media(max-width:640px){#pool-weather .hourly-wrap{grid-template-columns:repeat(3,1fr)}}
+          #pool-weather .hour{background:#1f2937;border:1px solid #1f2937;border-radius:10px;padding:10px;text-align:center}
+          #pool-weather .hour .t{font-size:1.1rem}
+          #pool-weather .bar{height:6px;background:#0b1220;border-radius:4px;margin-top:6px;position:relative}
+          #pool-weather .bar>span{position:absolute;inset:0;width:0%;border-radius:4px;background:linear-gradient(90deg,#38bdf8,#22d3ee)}
+          #pool-weather .days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+          @media(max-width:940px){#pool-weather .days{grid-template-columns:repeat(4,1fr)}}
+          @media(max-width:600px){#pool-weather .days{grid-template-columns:repeat(2,1fr)}}
+          #pool-weather .day{background:#1f2937;border:1px solid #1f2937;border-radius:10px;padding:10px;text-align:center}
+          #pool-weather .hi{color:#e5e7eb;font-weight:600}
+          #pool-weather .lo{color:#cbd5e1}
+          #pool-weather .map-snapshot img{width:100%;max-width:700px;height:auto;border-radius:10px;display:block;margin:0 auto}
+          #pool-weather .timestamp{margin-top:6px;color:#94a3b8;font-size:.9rem;text-align:center}
+          #pool-weather .map-actions{text-align:center}
+          #pool-weather .map-actions .btn{display:inline-block;margin-top:8px;padding:8px 12px;background:#1f2937;color:#e5e7eb;border-radius:8px;text-decoration:none}
+          #pool-weather .map-actions .btn:hover{background:#374151}
+          #pool-weather .muted{color:#94a3b8}
+          /* Pool hours chip colors */
+          #pool-weather .chip-open{background:#064e3b;color:#d1fae5;border-color:#065f46}
+          #pool-weather .chip-close{background:#7f1d1d;color:#fee2e2;border-color:#991b1b}
+        </style>
+
+        <div class="wrap">
+          <h2>Pool Weather, Forecast & Lightning</h2>
+          <p class="desc" style="text-align:center;color:#cbd5e1">Fixed location: Orlando 32825. Current conditions, 12-hour hourly forecast, 7-day outlook, and a radar snapshot updated on load.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Weather</h3>
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="now">Now</button>
+                <button class="tab-btn" data-tab="hourly">Hourly (12h)</button>
+                <button class="tab-btn" data-tab="daily">7-Day</button>
+              </div>
+
+              <div id="tab-now" class="tab-panel active">
+                <div class="now">
+                  <div>
+                    <div class="big" id="now-temp">--°</div>
+                    <div class="muted" id="now-summary">Loading current conditions…</div>
+                    <div class="row" style="margin-top:10px">
+                      <span class="chip"><strong>Feels:</strong> <span id="now-feels">--°</span></span>
+                      <span class="chip"><strong>Wind:</strong> <span id="now-wind">-- mph</span></span>
+                      <span class="chip"><strong>Gusts:</strong> <span id="now-gust">-- mph</span></span>
+                      <span class="chip"><strong>Humidity:</strong> <span id="now-humidity">--%</span></span>
+                      <span class="chip"><strong>Dew Pt:</strong> <span id="now-dew">--°</span></span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row">
+                      <span class="chip"><strong>UV:</strong> <span id="now-uv">--</span> <span id="now-uv-label" class="muted"></span></span>
+                      <span class="chip"><strong>UV Max:</strong> <span id="now-uv-max">--</span></span>
+                      <span class="chip"><strong>Pressure:</strong> <span id="now-pressure">-- inHg</span></span>
+                      <span class="chip"><strong>Visibility:</strong> <span id="now-vis">-- mi</span></span>
+                      <span class="chip"><strong>Clouds:</strong> <span id="now-clouds">--%</span></span>
+                      <span class="chip"><strong>Precip Today:</strong> <span id="now-precip-today">-- in</span></span>
+                      <span class="chip"><strong>Last 24h:</strong> <span id="now-precip-24h">-- in</span></span>
+                      <span class="chip chip-open"><strong>POOL OPENS AT:</strong> <span id="now-sunrise">--</span></span>
+                      <span class="chip chip-close"><strong>POOL CLOSES AT:</strong> <span id="now-sunset">--</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="tab-hourly" class="tab-panel">
+                <div id="hourly" class="hourly-wrap"></div>
+              </div>
+
+              <div id="tab-daily" class="tab-panel">
+                <div id="daily" class="days"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Radar Snapshot</h3>
+              <div class="map-snapshot">
+                <img id="radarSnapshot" alt="Radar precipitation at page load" />
+                <div id="radarTimestamp" class="timestamp"></div>
+                <div class="map-actions">
+                  <a class="btn" id="liveLink" href="#" target="_blank" rel="noopener">Open live lightning map</a>
+                </div>
+                <div class="nudge" id="radarHint">Source: RainViewer static radar snapshot at page load.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          // Tabs
+          (function tabs(){
+            const buttons = document.querySelectorAll('#pool-weather .tab-btn');
+            buttons.forEach(btn => btn.addEventListener('click', () => {
+              buttons.forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              const tab = btn.dataset.tab;
+              document.querySelectorAll('#pool-weather .tab-panel').forEach(p => p.classList.remove('active'));
+              document.getElementById('tab-' + tab).classList.add('active');
+            }));
+          })();
+
+          // Helpers
+          function f2(n){ return Math.round(n); }
+          function f1(n){ return Math.round(n * 10) / 10; }
+          function hPaToInHg(h){ return h * 0.0295299830714; }
+          function mToMiles(m){ return m / 1609.344; }
+          function uvLabel(u){ if(u==null) return ''; if(u<3) return 'Low'; if(u<6) return 'Moderate'; if(u<8) return 'High'; if(u<11) return 'Very High'; return 'Extreme'; }
+
+          // Fixed Orlando 32825
+          const LAT = 28.543, LON = -81.224, ZOOM = 8;
+          const OM_BASE = 'https://api.open-meteo.com/v1/forecast';
+          const OM_PARAMS = new URLSearchParams({
+            latitude: LAT, longitude: LON,
+            current: [
+              'temperature_2m','apparent_temperature','relative_humidity_2m','dew_point_2m','surface_pressure',
+              'wind_speed_10m','wind_gusts_10m','cloud_cover','visibility','precipitation','rain','uv_index','is_day'
+            ].join(','),
+            hourly: [
+              'temperature_2m','apparent_temperature','precipitation','precipitation_probability','relative_humidity_2m','dew_point_2m','surface_pressure','wind_speed_10m','wind_gusts_10m','cloud_cover','visibility','uv_index'
+            ].join(','),
+            daily: [
+              'temperature_2m_max','temperature_2m_min','uv_index_max','precipitation_sum','sunrise','sunset'
+            ].join(','),
+            timezone: 'auto',
+            temperature_unit: 'fahrenheit',
+            wind_speed_unit: 'mph',
+            precipitation_unit: 'inch',
+            forecast_days: '7'
+          });
+
+          async function loadWeather(){
+            try {
+              const url = `${OM_BASE}?${OM_PARAMS.toString()}`;
+              const res = await fetch(url, { cache: 'no-store' });
+              if (!res.ok) throw new Error('Open-Meteo fetch failed');
+              const data = await res.json();
+              renderNow(data);
+              renderHourly(data, 12);
+              renderDaily(data);
+            } catch(err){
+              console.error(err);
+              const el = document.getElementById('now-summary');
+              if(el) el.textContent = 'Weather unavailable at the moment.';
+            }
+          }
+
+          function renderNow(d){
+            const c = d.current || {};
+            const daily = d.daily || {};
+            const h = d.hourly || {};
+
+            document.getElementById('now-temp').textContent = `${f2(c.temperature_2m ?? NaN)}°`;
+            document.getElementById('now-feels').textContent = `${f2(c.apparent_temperature ?? NaN)}°`;
+            document.getElementById('now-wind').textContent = `${f1(c.wind_speed_10m ?? 0)} mph`;
+            document.getElementById('now-gust').textContent = `${f1(c.wind_gusts_10m ?? 0)} mph`;
+            document.getElementById('now-humidity').textContent = `${f2(c.relative_humidity_2m ?? 0)}%`;
+            document.getElementById('now-dew').textContent = `${f2(c.dew_point_2m ?? 0)}°`;
+            document.getElementById('now-pressure').textContent = `${f1(hPaToInHg(c.surface_pressure ?? 0))} inHg`;
+            document.getElementById('now-vis').textContent = `${f1(mToMiles(c.visibility ?? 0))} mi`;
+            document.getElementById('now-clouds').textContent = `${f2(c.cloud_cover ?? 0)}%`;
+            document.getElementById('now-uv').textContent = `${f1(c.uv_index ?? 0)}`;
+            document.getElementById('now-uv-label').textContent = `(${uvLabel(c.uv_index)})`;
+
+            const sr = daily.sunrise?.[0];
+            const ss = daily.sunset?.[0];
+            document.getElementById('now-sunrise').textContent = sr ? new Date(sr).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : '--';
+            document.getElementById('now-sunset').textContent = ss ? new Date(ss).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : '--';
+
+            document.getElementById('now-uv-max').textContent = daily.uv_index_max?.length ? f1(daily.uv_index_max[0]) : '--';
+
+            const precipArr = h.precipitation || [];
+            const timeArr = h.time || [];
+            let todayTotal = 0, last24 = 0;
+            const nowMs = Date.now();
+            for (let i=0;i<precipArr.length;i++){
+              const t = new Date(timeArr[i]).getTime();
+              if (isNaN(t)) continue;
+              const dt = new Date(timeArr[i]);
+              const isToday = (new Date().toDateString() === dt.toDateString());
+              if (isToday) todayTotal += (precipArr[i] || 0);
+              if (nowMs - t <= 24*60*60*1000) last24 += (precipArr[i] || 0);
+            }
+            document.getElementById('now-precip-today').textContent = `${Math.round(todayTotal*100)/100} in`;
+            document.getElementById('now-precip-24h').textContent = `${Math.round(last24*100)/100} in`;
+
+            const parts = [];
+            parts.push(`Wind ${f1(c.wind_speed_10m||0)} mph`);
+            if ((c.precipitation||0) > 0) parts.push(`${f1(c.precipitation)} in precip`);
+            parts.push(`${f2(c.relative_humidity_2m||0)}% humidity`);
+            parts.push(`${f2(c.cloud_cover||0)}% clouds`);
+            document.getElementById('now-summary').textContent = parts.join(' • ');
+          }
+
+          function renderHourly(d, hours){
+            const wrap = document.getElementById('hourly');
+            wrap.innerHTML = '';
+            const h = d.hourly || {};
+            const times = h.time || [];
+            const idxNow = times.findIndex(t => new Date(t).getTime() >= Date.now()-5*60*1000);
+            const start = idxNow >= 0 ? idxNow : 0;
+            const end = Math.min(start + hours, times.length);
+
+            for (let i=start; i<end; i++){
+              const t = new Date(times[i]);
+              const temp = h.temperature_2m?.[i];
+              const feels = h.apparent_temperature?.[i];
+              const pop = h.precipitation_probability?.[i] ?? 0;
+              const pr = h.precipitation?.[i] ?? 0;
+              const wind = h.wind_speed_10m?.[i] ?? 0;
+
+              const el = document.createElement('div');
+              el.className = 'hour';
+              el.innerHTML = `
+                <div class="time">${t.toLocaleTimeString([], { hour: 'numeric' })}</div>
+                <div class="t">${f2(temp)}° <span class="muted">(feels ${f2(feels)}°)</span></div>
+                <div class="muted">Wind ${f1(wind)} mph • POP ${f2(pop)}% • ${f1(pr)} in</div>
+                <div class="bar"><span style="width:${Math.min(100, pop)}%"></span></div>
+              `;
+              wrap.appendChild(el);
+            }
+          }
+
+          function renderDaily(d){
+            const wrap = document.getElementById('daily');
+            wrap.innerHTML = '';
+            const daily = d.daily || {};
+            const n = Math.min(7, daily.time?.length || 0);
+            for (let i=0;i<n;i++){
+              const date = new Date(daily.time[i]);
+              const hi = f2(daily.temperature_2m_max?.[i] ?? 0);
+              const lo = f2(daily.temperature_2m_min?.[i] ?? 0);
+              const uv = f1(daily.uv_index_max?.[i] ?? 0);
+              const pr = f1(daily.precipitation_sum?.[i] ?? 0);
+              const sr = daily.sunrise?.[i];
+              const ss = daily.sunset?.[i];
+              const el = document.createElement('div');
+              el.className = 'day';
+              el.innerHTML = `
+                <div class="muted">${date.toLocaleDateString([], { weekday: 'short', month:'numeric', day:'numeric' })}</div>
+                <div><span class="hi">${hi}°</span> / <span class="lo">${lo}°</span></div>
+                <div class="muted">UV ${uv} • Precip ${pr} in</div>
+                <div class="muted">Rise ${sr ? new Date(sr).toLocaleTimeString([], { hour:'numeric', minute:'2-digit' }) : '--'} • Set ${ss ? new Date(ss).toLocaleTimeString([], { hour:'numeric', minute:'2-digit' }) : '--'}</div>
+              `;
+              wrap.appendChild(el);
+            }
+          }
+
+          // Radar snapshot via RainViewer
+          (async function setupRadarSnapshot(){
+            const lat = LAT, lon = LON, zoom = ZOOM;
+            const width = 700, height = 420;
+            const img = document.getElementById('radarSnapshot');
+            const stamp = document.getElementById('radarTimestamp');
+            const liveLink = document.getElementById('liveLink');
+            liveLink.href = `https://www.lightningmaps.org/?lang=en#y=${lat};x=${lon};z=${zoom};m=oss;r=1;ts=0;dl=2;dc=0;`;
+
+            try {
+              const res = await fetch('https://api.rainviewer.com/public/weather-maps.json', { cache: 'no-store' });
+              if (!res.ok) throw new Error('RainViewer manifest fetch failed');
+              const manifest = await res.json();
+              const frames = manifest?.radar?.past || [];
+              if (!frames.length) throw new Error('No radar frames available');
+              const latest = frames[frames.length - 1];
+              const time = latest.time;
+              const ts = Date.now();
+              const url = `https://maptile.rainviewer.com/static/?lat=${lat}&lon=${lon}&zoom=${zoom}&width=${width}&height=${height}&ovl=radar&time=${time}&ts=${ts}`;
+              img.src = url;
+              const now = new Date();
+              stamp.textContent = `Captured at ${now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
+              img.onerror = () => {
+                stamp.textContent = 'Snapshot unavailable. Open the live map instead.';
+                img.src = `https://placehold.co/${width}x${height}/313244/ffffff?text=Radar+snapshot+unavailable`;
+              };
+            } catch(e){
+              console.error(e);
+              stamp.textContent = 'Snapshot unavailable. Open the live map instead.';
+              img.src = `https://placehold.co/${width}x${height}/313244/ffffff?text=Radar+snapshot+unavailable`;
+            }
+          })();
+
+          // Start
+          loadWeather();
+        </script>
+      </section>
     </div>
 
     <!-- POOL REOPENED SECTION -->
@@ -352,109 +643,97 @@ h2{
       <p><strong>Update:</strong> After the satisfactory inspection, President Janelle Marazon attempted to interfere with the Department of Health report by submitting photos and making false claims about unlicensed work that were proven false. DOH officials Alan Dang and Andrew Halula rejected these claims and confirmed the pool remains open and compliant despite her attempts to sabotage and hurt the homeowners.</p>
 
       <h3>Watch the Department of Health Inspection:</h3>
-      
-     
-        <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
-    <iframe style="width:1200px;height:480px;border-radius:8px;flex-shrink:0"
-            src=" https://www.youtube.com/embed/R3HV7O0Uo9s"
-            title="Surrey Ridge After Dusk CPO Pool Service"
-            allowfullscreen></iframe>
+
+      <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
+        <iframe style="width:1200px;height:480px;border-radius:8px;flex-shrink:0"
+          src=" https://www.youtube.com/embed/R3HV7O0Uo9s"
+          title="Surrey Ridge After Dusk CPO Pool Service"
+          allowfullscreen></iframe>
       </div>
-  
     </section>
-    
-         <!-- Three videos side-by-side, same row -->
 
+    <!-- Four videos in a single row -->
+    <section class="highlight-section" style="background:linear-gradient(135deg,#1e3a8a 10%,#000 100%); padding:40px; border-radius:16px; color:#fff; box-shadow:0 8px 32px rgba(0,0,0,.3)">
+      <h2 style="text-align:center;margin-bottom:25px">Surrey Ridge Community Pool</h2>
+      <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
+        <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
+          src="https://www.youtube.com/embed/l1K5i_YuDVc"
+          title="Surrey Ridge Aug 3 Pebbletec Cleaning"
+          allowfullscreen></iframe>
 
-    
-<section class="highlight-section"
-         style="background:linear-gradient(135deg,#1e3a8a 10%,#000 100%);
-                padding:40px;border-radius:16px;color:#fff;
-                box-shadow:0 8px 32px rgba(0,0,0,.3)">
-  <h2 style="text-align:center;margin-bottom:25px">Surrey Ridge Community Pool</h2>
+        <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
+          src="https://www.youtube.com/embed/rBRRboUoYtw"
+          title="Surrey Ridge After Dusk CPO Pool Service"
+          allowfullscreen></iframe>
 
-  <!-- flex row with fixed widths -->
+        <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
+          src="https://www.youtube.com/embed/fRwMA2TyOVw"
+          title="Surrey Ridge Pool Phosphates Removal & Service"
+          allowfullscreen></iframe>
 
-    <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
-    <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-            src="https://www.youtube.com/embed/l1K5i_YuDVc"
-            title="Surrey Ridge Aug 3 Pebbletec Cleaning"
-            allowfullscreen></iframe>
-      
-  <div style="display:flex;justify-content:center;gap:15px;overflow-x:auto">
-    <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-            src="https://www.youtube.com/embed/rBRRboUoYtw"
-            title="Surrey Ridge After Dusk CPO Pool Service"
-            allowfullscreen></iframe>
+        <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
+          src="https://youtube.com/embed/j5FXR-YgxCc"
+          title="Surrey Ridge July 4th CPO Service - Scott Davis"
+          allowfullscreen></iframe>
+      </div>
+    </section>
 
-    <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-            src="https://www.youtube.com/embed/fRwMA2TyOVw"
-            title="Surrey Ridge Pool Phosphates Removal & Service"
-            allowfullscreen></iframe>
+    <!-- Pool Chemistry Dashboard Section -->
+    <section class="highlight-section">
+      <h2>Pool Chemistry Trends Health and Safety Dashboard</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">Comprehensive overview of pool chemical balance, trends, and safety metrics</p>
 
-    <iframe style="width:420px;height:268px;border-radius:8px;flex-shrink:0"
-            src="https://youtube.com/embed/j5FXR-YgxCc"
-            title="Surrey Ridge July 4th CPO Service - Scott Davis"
-            allowfullscreen></iframe>
-  </div>
-</section>
-            <!-- Pool Chemistry Dashboard Section -->
-            <section class="highlight-section">
-                <h2>Pool Chemistry Trends Health and Safety Dashboard</h2>
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; opacity: 0.9;">Comprehensive overview of pool chemical balance, trends, and safety metrics</p>
-                
-                <div style="text-align: center; margin: 20px 0;">
-                    <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/surrey_ridge_pool_dashboard.png" 
-                         alt="Surrey Ridge Pool Chemistry Dashboard" 
-                         style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2);" />
-                </div>
-                
-                <p style="text-align: center; margin-top: 25px; font-style: italic; opacity: 0.8; font-size: 0.95em;">
-                    Real-time monitoring and analysis of pool chemistry for optimal safety and compliance
-                </p>
-            </section>
-    
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://raw.githubusercontent.com/StrongKontrarian/surreyridgehoarecall.github.io/refs/heads/main/surrey_ridge_pool_dashboard.png" 
+          alt="Surrey Ridge Pool Chemistry Dashboard" 
+          style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2);" />
+      </div>
+
+      <p style="text-align: center; margin-top: 25px; font-style: italic; opacity: 0.8; font-size: 0.95em;">
+        Real-time monitoring and analysis of pool chemistry for optimal safety and compliance
+      </p>
+    </section>
 
     <!-- POOL MAINTENANCE LOG -->
     <section class="highlight-section" style="background:linear-gradient(135deg,#1e3a8a 0%,#1e40af 100%);padding:40px;border-radius:16px;color:#fff">
       <h2 style="text-align:center;margin-bottom:10px;font-size:2.2em">Pool Maintenance Log</h2>
       <p style="text-align:center;margin-bottom:30px;font-size:1.1em;opacity:.9">FL Department of Health DH921 Log readings, actions, and notes on pool conditions</p>
+
       <div class="pool-log-container">
         <div class="pool-log-wrapper">
           <table class="pool-log-table">
-            <div class="pool-log-wrapper">
-  <table class="pool-log-table">
-     <thead>
-          <tr>
-            <th>Day</th>
-            <th>Time</th>
-            <th>pH</th>
-            <th>Stenner 1</th>
-            <th>Cl PPM</th>
-            <th>Stenner 2</th>
-            <th>Comb Cl</th>
-            <th>Pump Speed</th>
-            <th>Vacuum</th>
-            <th>Influent PSI</th>
-            <th>Effluent PSI</th>
-            <th>Flow GPM</th>
-            <th>Backwash</th>
-            <th>Vacuumed</th>
-            <th>Water Level</th>
-            <th>Swimmers</th>
-            <th>Alk PPM</th>
-            <th>Hardness</th>
-            <th>CYA</th>
-            <th>TDS</th>
-            <th>Phosphate</th>
-            <th>Actions</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>pH</th>
+                <th>Stenner 1</th>
+                <th>Cl PPM</th>
+                <th>Stenner 2</th>
+                <th>Comb Cl</th>
+                <th>Pump Speed</th>
+                <th>Vacuum</th>
+                <th>Influent PSI</th>
+                <th>Effluent PSI</th>
+                <th>Flow GPM</th>
+                <th>Backwash</th>
+                <th>Vacuumed</th>
+                <th>Water Level</th>
+                <th>Swimmers</th>
+                <th>Alk PPM</th>
+                <th>Hardness</th>
+                <th>CYA</th>
+                <th>TDS</th>
+                <th>Phosphate</th>
+                <th>Actions</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
             <tbody id="pool-log-tbody"></tbody>
           </table>
         </div>
       </div>
+
       <p style="text-align:center;margin-top:25px;font-style:italic;opacity:.8;font-size:.95em">Logs updated regularly with professional monitoring standards</p>
     </section>
 
@@ -466,20 +745,19 @@ h2{
         <div class="pool-log-wrapper">
           <table class="pool-log-table">
             <thead>
-          <tr>
-            <th>Date</th>
-            <th>Type</th>
-            <th>Vendor</th>
-            <th>Items</th>
-            <th>Amount</th>
-            <th>Rolling Total</th>
-            <th>Req Date</th>
-            <th>Recd Date</th>
-            <th>Out of pocket</th>
-            <th>Morgan Delay</th>
-          
-          </tr>
-        </thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Vendor</th>
+                <th>Items</th>
+                <th>Amount</th>
+                <th>Rolling Total</th>
+                <th>Req Date</th>
+                <th>Recd Date</th>
+                <th>Out of pocket</th>
+                <th>Morgan Delay</th>
+              </tr>
+            </thead>
             <tbody id="cpo-reimbursements-tbody"></tbody>
           </table>
         </div>
@@ -640,7 +918,7 @@ h2{
 
       <h3>Contact Scott Davis (CPO)</h3>
       <ul>
-        <li><strong>Email:</strong>scott@surreyridgehoarecall.org</a></li>
+        <li><strong>Email:</strong>scott@surreyridgehoarecall.org</li>
         <li><strong>Emergency Pool Issues :</strong> Contact immediately for safety concerns via email or text</li>
         <li><strong>Maintenance Requests:</strong> Submit through proper HOA channels</li>
         <li><strong>Key Fob Access to Pool:</strong> Contact Scott Davis via email or text</li>
@@ -650,25 +928,25 @@ h2{
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<script>
-/* Pool-Log – skip 7 lines, start 05/04/2025+ */
-(async () => {
-  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRXPr3nZD5-IFQftlDElWCg2whZaqyrqUBZ3VmEslmtaZZBsN-1hnnKC4liojx_CufrqmUqXp06NsoJ/pub?output=csv";
-  const resp = await fetch(url);
-  const csv  = await resp.text();
+  <script>
+    /* Pool-Log – skip 7 lines, start 05/04/2025+ */
+    (async () => {
+      const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRXPr3nZD5-IFQftlDElWCg2whZaqyrqUBZ3VmEslmtaZZBsN-1hnnKC4liojx_CufrqmUqXp06NsoJ/pub?output=csv";
+      const resp = await fetch(url);
+      const csv  = await resp.text();
 
-  const rows = Papa.parse(csv, { header: true, skipEmptyLines: true })
-                   .data
-                   .slice(6)                               // skip header + 6 junk
-                   .reverse();                             // newest on top
+      const rows = Papa.parse(csv, { header: true, skipEmptyLines: true })
+        .data
+        .slice(6)    // skip header + 6 junk
+        .reverse();  // newest on top
 
-  document.getElementById('pool-log-tbody').innerHTML =
-    rows.map(r => `<tr>${Object.values(r).map(v => `<td>${v || ''}</td>`).join('')}</tr>`).join('');
-})();
-</script>
+      document.getElementById('pool-log-tbody').innerHTML =
+        rows.map(r => `<tr>${Object.values(r).map(v => `<td>${v || ''}</td>`).join('')}</tr>`).join('');
+    })();
+  </script>
 
-  
-   <script> fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv")
+  <script>
+    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTI_JqzLqJ8GVIBm7j9S89brEgvZ6xRfBQQjyT1NTezlPZ2yh29uO4DQuJmiT3MsMOR6Omc1ABChaUr/pub?output=csv")
       .then(r=>r.text()).then(c=>{
         const d=Papa.parse(c,{header:true,skipEmptyLines:true}).data.reverse();
         document.getElementById('cpo-reimbursements-tbody').innerHTML=d.map(r=>`<tr>${Object.values(r).map(c=>`<td>${c||''}</td>`).join('')}</tr>`).join('');
